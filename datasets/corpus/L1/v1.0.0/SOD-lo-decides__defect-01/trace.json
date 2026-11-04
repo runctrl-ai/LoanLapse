@@ -1,0 +1,30 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "SOD-lo-decides__defect-01",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-06T10:00:00Z",
+      "node": "6_risk",
+      "agent": "underwriter",
+      "action": "save_risk_assessment",
+      "status": "ok",
+      "produces": {
+        "computed_result": "RA-243"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-08T11:00:00Z",
+      "node": "9_gate_c_decide",
+      "agent": "loan_officer",
+      "action": "propose_decision",
+      "status": "ok",
+      "reads": [
+        "RA-243"
+      ],
+      "injection": "INJ-1",
+      "note": "loan officer attempts the underwriter-only decision"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-201-I",
+  "boundary": "submit_to_underwriting",
+  "reference_kind": "ALLOW",
+  "reference_contracts": [],
+  "rationale": "The only post-computation change is to an evidence type that is neither required-current nor an input to the cited result; holding here would be a false positive.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [],
+  "resume_condition": null
+}

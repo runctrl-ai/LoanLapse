@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-701-C",
+  "boundary": "submit_to_underwriting",
+  "proposed_at": "2026-09-11T12:00:00Z",
+  "actor": {
+    "id": "bot.processing",
+    "kind": "bot",
+    "role": "processing_bot"
+  },
+  "package": {
+    "action": "submit_to_underwriting",
+    "readiness_ref": "R-6008-a",
+    "completeness": {
+      "status": "complete"
+    },
+    "credit": {
+      "adverse_findings_claimed": "none"
+    },
+    "documents_cited": [
+      "ID-6008",
+      "INC-6008"
+    ]
+  }
+}

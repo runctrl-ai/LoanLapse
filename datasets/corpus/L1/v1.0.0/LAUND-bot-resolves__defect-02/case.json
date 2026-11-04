@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LAUND-bot-resolves__defect-02",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-LAUND"
+  ],
+  "issue_id": "LAUND-bot-resolves",
+  "variation": "V2",
+  "gate": "B",
+  "group_id": "LAUND-bot-resolves",
+  "split": "unassigned",
+  "loan_keys": {
+    "loan_id": "LN-7277",
+    "borrower_id": "BRW-877"
+  }
+}

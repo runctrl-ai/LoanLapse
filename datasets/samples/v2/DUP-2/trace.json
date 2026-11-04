@@ -1,0 +1,43 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "DUP-2",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-09T10:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "BS-2201"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-10T10:00:00Z",
+      "node": "4_processing",
+      "agent": "loan_officer",
+      "action": "verify_assets",
+      "status": "ok",
+      "produces": {
+        "computed_result": "A-3005"
+      },
+      "reads": [
+        "BS-2201"
+      ]
+    },
+    {
+      "seq": 3,
+      "at": "2026-09-11T10:00:00Z",
+      "node": "5_gate_a_submit",
+      "agent": "loan_officer",
+      "action": "propose_submit",
+      "status": "ok",
+      "reads": [
+        "A-3005",
+        "R-3005"
+      ]
+    }
+  ]
+}

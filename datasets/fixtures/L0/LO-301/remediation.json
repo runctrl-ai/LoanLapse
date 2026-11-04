@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-301",
+  "events": [
+    {
+      "type": "document_received",
+      "document": {
+        "id": "LTR-88",
+        "type": "explanation_letter",
+        "version": 1,
+        "channel": "portal",
+        "received_at": "2026-09-09T10:00:00Z",
+        "payload": {
+          "subject": "Explanation of 9,800 deposit"
+        }
+      }
+    },
+    {
+      "type": "obligation_resolved",
+      "obligation_id": "C-17",
+      "resolution": {
+        "by": {
+          "id": "user.proc1",
+          "role": "processor"
+        },
+        "evidence_ref": {
+          "document_id": "LTR-88",
+          "version": 1
+        },
+        "at": "2026-09-09T15:00:00Z"
+      }
+    }
+  ]
+}

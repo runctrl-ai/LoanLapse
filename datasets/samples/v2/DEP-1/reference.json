@@ -1,0 +1,25 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "DEP-1",
+  "boundary": "render_decision",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireDependencyFreshness"
+  ],
+  "variation": "V2",
+  "rationale": "An override set the accepted income (5200 -> 4100) at 09-08, after RA-8001 was computed on 09-06, and no new risk assessment was produced; the decision cites the stale RA-8001. The dependent risk numbers must be recomputed before the decision.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "resume_condition": "Recompute the risk assessment from the corrected income value, then re-decide.",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "Each step ran correctly; the override was a legitimate underwriter edit. The failure is only the composition — a depended-on value changed and its downstream result was not invalidated.",
+  "override": {
+    "field": "income",
+    "from": 5200,
+    "to": 4100,
+    "at": "2026-09-08T14:00:00Z"
+  }
+}

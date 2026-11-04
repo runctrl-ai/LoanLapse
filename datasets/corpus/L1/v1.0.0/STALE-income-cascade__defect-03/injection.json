@@ -1,0 +1,24 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "STALE-income-cascade__defect-03",
+  "injections": [
+    {
+      "injection_id": "INJ-1",
+      "variation": "V2",
+      "kind": "internal",
+      "at_seq": 6,
+      "at": "2026-09-10T08:30:00Z",
+      "agent_state": {
+        "node": "4_processing",
+        "mode": "waiting",
+        "waiting_for": "updated_income"
+      },
+      "resume": "resume_from_state",
+      "payload": {
+        "document": "INC-1003",
+        "version": 2,
+        "monthly": 5450
+      }
+    }
+  ]
+}

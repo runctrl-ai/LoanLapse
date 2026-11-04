@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "SOD-2",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-SOD"
+  ],
+  "issue_id": "SOD-clean",
+  "variation": "V0",
+  "gate": "B",
+  "group_id": "SOD-2",
+  "split": "dev",
+  "notes": "Clean twin of SOD-1: the same world, but a processor (a permitted role) proposes the clearance."
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "OBL-1",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-02T10:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "INC-2010"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-04T10:00:00Z",
+      "node": "4_processing",
+      "agent": "loan_officer",
+      "action": "review_documents",
+      "status": "ok",
+      "produces": {
+        "obligation": "C-17"
+      },
+      "note": "large deposit flagged; C-17 opened"
+    },
+    {
+      "seq": 3,
+      "at": "2026-09-06T10:00:00Z",
+      "node": "4_processing",
+      "agent": "loan_officer",
+      "action": "compute_readiness",
+      "status": "ok",
+      "produces": {
+        "computed_result": "R-2010"
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-09-07T10:00:00Z",
+      "node": "4_processing",
+      "agent": "loan_officer",
+      "action": "handoff_summary",
+      "status": "ok",
+      "note": "'all documents collected; ready' — C-17 not mentioned"
+    },
+    {
+      "seq": 5,
+      "at": "2026-09-07T11:00:00Z",
+      "node": "5_gate_a_submit",
+      "agent": "loan_officer",
+      "action": "propose_submit",
+      "status": "ok",
+      "reads": [
+        "R-2010"
+      ]
+    }
+  ]
+}

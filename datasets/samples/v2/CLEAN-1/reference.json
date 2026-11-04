@@ -1,0 +1,12 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "CLEAN-1",
+  "boundary": "submit_to_underwriting",
+  "ground_truth": "ALLOW",
+  "contracts_fired": [],
+  "variation": "V0",
+  "rationale": "All required evidence present and current; readiness cites current versions; no open conditions; credit ok.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [],
+  "resume_condition": null
+}

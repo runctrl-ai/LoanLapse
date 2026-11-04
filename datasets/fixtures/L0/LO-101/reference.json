@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-101",
+  "boundary": "submit_to_underwriting",
+  "reference_kind": "ALLOW",
+  "reference_contracts": [],
+  "rationale": "All required evidence present and current; readiness cites current versions; no open obligations; connector ok.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [],
+  "resume_condition": null
+}

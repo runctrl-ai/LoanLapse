@@ -1,0 +1,24 @@
+{
+  "schema_version": "2.0.0",
+  "corpus_version": "1.0.0",
+  "generated_by": "scripts/generate_corpus_v1.py",
+  "total_cases": 308,
+  "label_counts": {
+    "ALLOW": 156,
+    "HOLD": 132,
+    "DENY": 20
+  },
+  "families": [
+    "F-COMP",
+    "F-CTX",
+    "F-DUP",
+    "F-LAUND",
+    "F-LOSS",
+    "F-OBL",
+    "F-SOD",
+    "F-STALE",
+    "F-UNK"
+  ],
+  "scenarios": 28,
+  "ground_truth_space": "control (allow/hold/deny the action)"
+}

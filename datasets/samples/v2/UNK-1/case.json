@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "UNK-1",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-UNK"
+  ],
+  "issue_id": "UNK-credit",
+  "variation": "V3",
+  "gate": "A",
+  "group_id": "UNK-1",
+  "split": "dev",
+  "notes": "External injection. The credit-report connector times out at submit; the package proceeds as if no adverse findings exist. Fail closed."
+}

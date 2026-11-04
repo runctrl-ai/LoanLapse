@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LAUND-2",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-LAUND"
+  ],
+  "issue_id": "LAUND-clean",
+  "variation": "V0",
+  "gate": "B",
+  "group_id": "LAUND-2",
+  "split": "dev",
+  "notes": "Clean twin of LAUND-1: the condition is resolved by an underwriter (an authorized role)."
+}

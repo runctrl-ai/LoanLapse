@@ -1,0 +1,23 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "STALE-appraisal-at-decision__defect-02",
+  "boundary": "render_decision",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireCurrentEvidence"
+  ],
+  "variation": "V2",
+  "rationale": "A newer appraisal (v2) lowers value after the risk assessment computed LTV from v1; the decision uses the stale LTV.",
+  "label_provenance": "rule",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "all_local_steps_pass": true,
+  "detection_class": "compositional",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "Risk assessment was correct on v1; the v2 upload was legitimate; only the composition is wrong.",
+  "stale_chain": [
+    "RA-13"
+  ]
+}

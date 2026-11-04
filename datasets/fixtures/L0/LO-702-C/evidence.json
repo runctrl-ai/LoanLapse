@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-702-C",
+  "documents": [
+    {
+      "id": "VOE-6011",
+      "type": "voe",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-10T10:00:00Z",
+      "payload": {
+        "employer": "Synthetic Corp",
+        "status": "employed"
+      }
+    }
+  ],
+  "computed_results": [],
+  "connectors": [
+    {
+      "name": "voe_verification",
+      "status": "ok",
+      "attempted_at": "2026-09-12T10:00:00Z",
+      "result": {
+        "match": true
+      }
+    }
+  ]
+}

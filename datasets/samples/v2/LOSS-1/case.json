@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LOSS-1",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-LOSS"
+  ],
+  "issue_id": "LOSS-empty",
+  "variation": "V3",
+  "gate": "C",
+  "group_id": "LOSS-1",
+  "split": "dev",
+  "notes": "External injection. A registry API returns success but an empty body; the risk step reads the empty result as 'no adverse' and proceeds."
+}

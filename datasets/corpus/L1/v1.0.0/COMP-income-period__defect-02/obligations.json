@@ -1,0 +1,22 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "COMP-income-period__defect-02",
+  "obligations": [
+    {
+      "id": "OBL-35",
+      "kind": "pending_evidence",
+      "type": "income_period_pending",
+      "enforce_at": [
+        "submit_to_underwriting"
+      ],
+      "clearable_by": [
+        "processor"
+      ],
+      "status_recorded": "active",
+      "resolution": null,
+      "payload": {
+        "missing_period": "2026-08"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "OBL-deposit-omitted__handled-07",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-OBL"
+  ],
+  "issue_id": "OBL-deposit-omitted",
+  "variation": "V2",
+  "gate": "A",
+  "group_id": "OBL-deposit-omitted",
+  "split": "unassigned",
+  "loan_keys": {
+    "loan_id": "LN-7139",
+    "borrower_id": "BRW-739"
+  }
+}

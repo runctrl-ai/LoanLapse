@@ -1,0 +1,33 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "OBL-deposit-omitted__clean-10",
+  "obligations": [
+    {
+      "id": "C-142",
+      "kind": "condition",
+      "type": "large_deposit_explanation",
+      "enforce_at": [
+        "submit_to_underwriting"
+      ],
+      "clearable_by": [
+        "processor",
+        "underwriter"
+      ],
+      "status_recorded": "resolved",
+      "resolution": {
+        "by": {
+          "id": "user.proc1",
+          "role": "processor"
+        },
+        "evidence_ref": {
+          "doc_id": "LTR-5142",
+          "version": 1
+        },
+        "at": "2026-09-08T15:00:00Z"
+      },
+      "payload": {
+        "deposit_amount": 16100
+      }
+    }
+  ]
+}

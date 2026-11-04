@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-702-C",
+  "boundary": "mark_conditions_cleared",
+  "reference_kind": "ALLOW",
+  "reference_contracts": [],
+  "rationale": "The must-know connector returned a match and the resolution is valid and current.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [],
+  "resume_condition": null
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-401",
+  "boundary": "submit_to_underwriting",
+  "reference_kind": "HOLD",
+  "reference_contracts": [
+    "requireSingleSourceOfTruth"
+  ],
+  "rationale": "BS-2288 and BS-2201 resolve to the same real statement (account 4821, period 2026-07); the package cites the copy generated 2026-08-01, superseded by the 2026-08-15 regeneration.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "resume_condition": "Recompute asset verification from BS-2201 and re-propose citing it.",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "Each channel ingestion was valid and each extraction was correct for the copy it saw; either copy alone would support a clean file. The violation exists only across records: two locally unique documents are the same artifact, and the cited one is superseded."
+}

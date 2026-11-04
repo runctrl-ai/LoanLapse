@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "DUP-corrected-paystub__defect-04",
+  "boundary": "submit_to_underwriting",
+  "proposed_at": "2026-09-09T10:00:00Z",
+  "actor": {
+    "id": "user.lo1",
+    "role": "loan_officer"
+  },
+  "package": {
+    "action": "submit_to_underwriting",
+    "readiness_ref": "R-4114",
+    "completeness": {
+      "status": "complete"
+    },
+    "documents_cited": [
+      "INC-4514"
+    ]
+  }
+}

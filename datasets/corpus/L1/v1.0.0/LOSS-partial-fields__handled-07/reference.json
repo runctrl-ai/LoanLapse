@@ -1,0 +1,10 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LOSS-partial-fields__handled-07",
+  "boundary": "render_decision",
+  "ground_truth": "ALLOW",
+  "contracts_fired": [],
+  "variation": "V3",
+  "rationale": "The registry first returned an empty body but a re-fetch returned a populated current result, which the decision uses -> allow.",
+  "label_provenance": "rule"
+}

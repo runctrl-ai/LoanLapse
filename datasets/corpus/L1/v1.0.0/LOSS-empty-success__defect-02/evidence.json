@@ -1,0 +1,41 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LOSS-empty-success__defect-02",
+  "documents": [
+    {
+      "id": "ID-7200",
+      "type": "identity",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-01T10:00:00Z",
+      "generated_at": "2026-09-01T10:00:00Z",
+      "payload": {
+        "name": "A. Rivera"
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "RA-200",
+      "type": "risk_assessment",
+      "computed_at": "2026-09-06T10:00:00Z",
+      "computed_at_seq": 3,
+      "inputs": {},
+      "derived_from": [],
+      "outcome": {
+        "recommendation": "approve",
+        "kyb": "clear"
+      }
+    }
+  ],
+  "connectors": [
+    {
+      "name": "kyb_registry",
+      "status": "ok",
+      "attempted_at": "2026-09-06T09:00:00Z",
+      "result": {
+        "records": []
+      }
+    }
+  ]
+}

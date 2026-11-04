@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-101",
+  "workflow": "W1",
+  "boundary": "submit_to_underwriting",
+  "family_ids": [],
+  "group_id": "G-101",
+  "contrast_role": "clean",
+  "split": "dev",
+  "revision": 1,
+  "loan_keys": {
+    "loan_id": "LN-1001",
+    "borrower_id": "BRW-101"
+  },
+  "notes": "Plain clean W1 allow: every document current, readiness computed from current versions, no obligations, credit connector ok.",
+  "variation": "V0"
+}

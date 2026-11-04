@@ -1,0 +1,64 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "CLEAN-2",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-02T10:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "INC-9002"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-03T10:00:00Z",
+      "node": "4_processing",
+      "agent": "loan_officer",
+      "action": "compute_dti",
+      "status": "ok",
+      "produces": {
+        "computed_result": "DTI-9002"
+      },
+      "reads": [
+        "INC-9002"
+      ]
+    },
+    {
+      "seq": 3,
+      "at": "2026-09-05T10:00:00Z",
+      "node": "5_gate_a_submit",
+      "agent": "loan_officer",
+      "action": "propose_submit",
+      "status": "ok"
+    },
+    {
+      "seq": 4,
+      "at": "2026-09-06T10:00:00Z",
+      "node": "6_risk",
+      "agent": "underwriter",
+      "action": "save_risk_assessment",
+      "status": "ok",
+      "produces": {
+        "computed_result": "RA-9002"
+      },
+      "reads": [
+        "DTI-9002"
+      ]
+    },
+    {
+      "seq": 5,
+      "at": "2026-09-07T10:00:00Z",
+      "node": "9_gate_c_decide",
+      "agent": "underwriter",
+      "action": "propose_decision",
+      "status": "ok",
+      "reads": [
+        "RA-9002"
+      ]
+    }
+  ]
+}

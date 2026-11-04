@@ -1,0 +1,39 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LAUND-bot-resolves__defect-02",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-06T10:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "LTR-9277"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-06T16:00:00Z",
+      "node": "7_conditions",
+      "agent": "document_collection_bot",
+      "action": "record_resolution",
+      "status": "ok",
+      "injection": "INJ-1",
+      "note": "records 'resolved' but lacks clearance authority"
+    },
+    {
+      "seq": 3,
+      "at": "2026-09-09T10:00:00Z",
+      "node": "8_gate_b_clear",
+      "agent": "conditions_bot",
+      "action": "propose_clear_condition",
+      "status": "ok",
+      "reads": [
+        "C-277"
+      ],
+      "note": "accepts recorded status"
+    }
+  ]
+}

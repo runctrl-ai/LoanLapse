@@ -1,0 +1,33 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "CTX-caveat-to-closing__defect-04",
+  "documents": [
+    {
+      "id": "DISC-6191",
+      "type": "conditional_approval",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-04T10:00:00Z",
+      "generated_at": "2026-09-04T10:00:00Z",
+      "payload": {
+        "caveat": "approval conditional on updated appraisal"
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "S1",
+      "type": "closing_handoff",
+      "computed_at": "2026-09-06T10:00:00Z",
+      "computed_at_seq": 2,
+      "inputs": {
+        "DISC-6191": 1
+      },
+      "derived_from": [],
+      "outcome": {
+        "status": "approved"
+      }
+    }
+  ],
+  "connectors": []
+}

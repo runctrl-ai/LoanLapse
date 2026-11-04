@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-301-X",
+  "obligations": [
+    {
+      "id": "C-17",
+      "kind": "condition",
+      "type": "large_deposit_explanation",
+      "status_recorded": "resolved",
+      "opened_at": "2026-09-04T10:00:00Z",
+      "opened_by": {
+        "step": "review",
+        "role": "underwriting_system"
+      },
+      "enforce_at": [
+        "submit_to_underwriting"
+      ],
+      "clearable_by": [
+        "processor",
+        "underwriter"
+      ],
+      "description": "Large deposit on bank statement requires an explanation letter.",
+      "payload": {
+        "deposit_amount": 9800
+      },
+      "resolution": {
+        "by": {
+          "id": "bot.doc_collect",
+          "role": "document_collection_bot"
+        },
+        "evidence_ref": {
+          "document_id": "LTR-88",
+          "version": 1
+        },
+        "at": "2026-09-06T16:00:00Z"
+      }
+    }
+  ]
+}

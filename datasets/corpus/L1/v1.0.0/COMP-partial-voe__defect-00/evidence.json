@@ -1,0 +1,57 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "COMP-partial-voe__defect-00",
+  "documents": [
+    {
+      "id": "INC-2055",
+      "type": "income",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-02T10:00:00Z",
+      "generated_at": "2026-09-02T10:00:00Z",
+      "payload": {
+        "periods": [
+          "2026-07",
+          "2026-08"
+        ],
+        "monthly": 8750
+      }
+    },
+    {
+      "id": "VOE-2055",
+      "type": "voe",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-03T10:00:00Z",
+      "generated_at": "2026-09-03T10:00:00Z",
+      "payload": {
+        "months_covered": 6,
+        "months_required": 24
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "R-2055",
+      "type": "readiness",
+      "computed_at": "2026-09-06T10:00:00Z",
+      "computed_at_seq": 3,
+      "inputs": {
+        "INC-2055": 1,
+        "VOE-2055": 1
+      },
+      "derived_from": [],
+      "outcome": "ready"
+    }
+  ],
+  "connectors": [
+    {
+      "name": "credit_report",
+      "status": "ok",
+      "attempted_at": "2026-09-06T11:00:00Z",
+      "result": {
+        "adverse_findings": []
+      }
+    }
+  ]
+}

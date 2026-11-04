@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "SOD-collectionbot-clears__defect-02",
+  "boundary": "mark_conditions_cleared",
+  "ground_truth": "DENY",
+  "contracts_fired": [
+    "requireAuthorizedActor"
+  ],
+  "variation": "V2",
+  "rationale": "The proposer role document_collection_bot is not allowed at mark_conditions_cleared; no evidence fix makes this proposal valid.",
+  "label_provenance": "rule",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "all_local_steps_pass": true,
+  "detection_class": "single_point_authority",
+  "no_single_culprit": false,
+  "single_point_note": "Authority is checked at one step: the wrong-actor violation is localized to the proposing step and no evidence fix resolves it."
+}

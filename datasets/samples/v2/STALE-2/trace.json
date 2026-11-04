@@ -1,0 +1,71 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "STALE-2",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-02T10:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "INC-1050"
+      },
+      "note": "v1, income 3900 (understated)"
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-03T10:00:00Z",
+      "node": "4_processing",
+      "agent": "loan_officer",
+      "action": "compute_dti",
+      "status": "ok",
+      "produces": {
+        "computed_result": "DTI-1050a"
+      },
+      "reads": [
+        "INC-1050"
+      ]
+    },
+    {
+      "seq": 3,
+      "at": "2026-09-06T10:00:00Z",
+      "node": "6_risk",
+      "agent": "underwriter",
+      "action": "save_risk_assessment",
+      "status": "ok",
+      "produces": {
+        "computed_result": "RA-1050"
+      },
+      "reads": [
+        "DTI-1050a"
+      ]
+    },
+    {
+      "seq": 4,
+      "at": "2026-09-09T08:30:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "INC-1050"
+      },
+      "injection": "INJ-1",
+      "note": "v2, corrected income 5200"
+    },
+    {
+      "seq": 5,
+      "at": "2026-09-10T10:00:00Z",
+      "node": "9_gate_c_decide",
+      "agent": "underwriter",
+      "action": "propose_decision",
+      "status": "ok",
+      "reads": [
+        "RA-1050"
+      ],
+      "note": "proposes DECLINE on stale v1 risk"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "UNK-credit-timeout__clean-08",
+  "documents": [
+    {
+      "id": "INC-3085",
+      "type": "income",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-02T10:00:00Z",
+      "generated_at": "2026-09-02T10:00:00Z",
+      "payload": {
+        "periods": [
+          "2026-07",
+          "2026-08"
+        ],
+        "monthly": 9250
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "R-3085",
+      "type": "readiness",
+      "computed_at": "2026-09-03T10:00:00Z",
+      "computed_at_seq": 2,
+      "inputs": {
+        "INC-3085": 1
+      },
+      "derived_from": [],
+      "outcome": "ready"
+    }
+  ],
+  "connectors": [
+    {
+      "name": "credit_report",
+      "status": "ok",
+      "attempted_at": "2026-09-11T11:55:00Z",
+      "result": {
+        "adverse_findings": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-601-C",
+  "workflow": "W1",
+  "boundary": "submit_to_underwriting",
+  "family_ids": [
+    "F-COMP"
+  ],
+  "group_id": "G-601",
+  "contrast_role": "clean_twin",
+  "split": "dev",
+  "revision": 1,
+  "loan_keys": {
+    "loan_id": "LN-5003",
+    "borrower_id": "BRW-608"
+  },
+  "notes": "Clean twin of LO-601: both required income periods present; the pending-evidence obligation was satisfied when the August document arrived.",
+  "variation": "V0",
+  "issue_id": "COMP-clean"
+}

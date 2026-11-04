@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LOSS-stale-cache__handled-05",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-LOSS"
+  ],
+  "issue_id": "LOSS-stale-cache",
+  "variation": "V3",
+  "gate": "C",
+  "group_id": "LOSS-stale-cache",
+  "split": "unassigned",
+  "loan_keys": {
+    "loan_id": "LN-7214",
+    "borrower_id": "BRW-814"
+  }
+}

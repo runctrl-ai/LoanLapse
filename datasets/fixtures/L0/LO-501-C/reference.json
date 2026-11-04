@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-501-C",
+  "boundary": "mark_conditions_cleared",
+  "reference_kind": "ALLOW",
+  "reference_contracts": [],
+  "rationale": "Same world state; the proposer is an authorized role and the condition carries a valid resolution.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [],
+  "resume_condition": null
+}

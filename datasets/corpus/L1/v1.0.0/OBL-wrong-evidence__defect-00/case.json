@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "OBL-wrong-evidence__defect-00",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-OBL"
+  ],
+  "issue_id": "OBL-wrong-evidence",
+  "variation": "V2",
+  "gate": "A",
+  "group_id": "OBL-wrong-evidence",
+  "split": "unassigned",
+  "loan_keys": {
+    "loan_id": "LN-7154",
+    "borrower_id": "BRW-754"
+  }
+}

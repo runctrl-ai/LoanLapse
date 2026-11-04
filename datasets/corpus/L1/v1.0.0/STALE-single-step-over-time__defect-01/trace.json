@@ -1,0 +1,57 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "STALE-single-step-over-time__defect-01",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-02T09:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "INC-1023"
+      },
+      "note": "income v1 on file"
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-02T09:30:00Z",
+      "node": "4_processing",
+      "agent": "loan_officer",
+      "action": "compute_readiness",
+      "status": "ok",
+      "produces": {
+        "computed_result": "R-1023"
+      },
+      "reads": [
+        "INC-1023"
+      ],
+      "note": "readiness computed from v1"
+    },
+    {
+      "seq": 3,
+      "at": "2026-09-11T09:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "INC-1023"
+      },
+      "note": "income v2 arrives; SOP has no step to recompute"
+    },
+    {
+      "seq": 4,
+      "at": "2026-09-12T10:00:00Z",
+      "node": "5_gate_a_submit",
+      "agent": "loan_officer",
+      "action": "propose_submit",
+      "status": "ok",
+      "reads": [
+        "R-1023"
+      ],
+      "note": "submits citing the v1 readiness; never refreshed"
+    }
+  ]
+}

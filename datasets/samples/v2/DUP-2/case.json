@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "DUP-2",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-DUP"
+  ],
+  "issue_id": "DUP-clean",
+  "variation": "V0",
+  "gate": "A",
+  "group_id": "DUP-2",
+  "split": "dev",
+  "notes": "Clean twin of DUP-1: only the current portal copy exists; asset verification cites it."
+}

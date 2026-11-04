@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "COMP-partial-voe__clean-09",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-COMP"
+  ],
+  "issue_id": "COMP-partial-voe",
+  "variation": "V0",
+  "gate": "A",
+  "group_id": "COMP-partial-voe",
+  "split": "unassigned",
+  "loan_keys": {
+    "loan_id": "LN-7064",
+    "borrower_id": "BRW-664"
+  }
+}

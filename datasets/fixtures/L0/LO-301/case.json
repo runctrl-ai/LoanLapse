@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-301",
+  "workflow": "W1",
+  "boundary": "submit_to_underwriting",
+  "family_ids": [
+    "F-OBL"
+  ],
+  "group_id": "G-301",
+  "contrast_role": "violation",
+  "split": "dev",
+  "revision": 1,
+  "loan_keys": {
+    "loan_id": "LN-2010",
+    "borrower_id": "BRW-317"
+  },
+  "notes": "Claims-note seed case. Review opened condition C-17; the handoff summary omits it; the file is submitted as ready while C-17 is still open.",
+  "variation": "V1",
+  "issue_id": "OBL-deposit"
+}

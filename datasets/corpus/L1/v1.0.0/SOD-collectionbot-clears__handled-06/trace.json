@@ -1,0 +1,35 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "SOD-collectionbot-clears__handled-06",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-08T10:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "LTR-8237"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-08T14:00:00Z",
+      "node": "7_conditions",
+      "agent": "processor",
+      "action": "resolve_condition",
+      "status": "ok"
+    },
+    {
+      "seq": 3,
+      "at": "2026-09-09T10:00:00Z",
+      "node": "8_gate_b_clear",
+      "agent": "processor",
+      "action": "propose_clear_condition",
+      "status": "ok",
+      "injection": "INJ-1",
+      "note": "proposer role set, but to an authorized role (processor)"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "OBL-1",
+  "boundary": "submit_to_underwriting",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireNoOpenConditions"
+  ],
+  "variation": "V1",
+  "rationale": "Condition C-17 is open (no valid resolution) and enforced at submit; the package proposes to move the file forward while it is unresolved.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "resume_condition": "Resolve C-17 via an authorized role with the explanation letter, then re-propose.",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "Review correctly opened the condition; the summary's claim about documents is locally true; the proposal is well-formed. The failure is only the composition — the open condition dropped from the handoff."
+}

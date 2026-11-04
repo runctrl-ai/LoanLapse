@@ -1,0 +1,12 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "CLEAN-1",
+  "workflow": "loan_underwriting",
+  "family_ids": [],
+  "issue_id": null,
+  "variation": "V0",
+  "gate": "A",
+  "group_id": "CLEAN-1",
+  "split": "dev",
+  "notes": "Clean file that genuinely qualifies. No defect; ground truth ALLOW."
+}

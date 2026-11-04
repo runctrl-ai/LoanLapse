@@ -1,0 +1,30 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "SOD-lo-decides__handled-05",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-06T10:00:00Z",
+      "node": "6_risk",
+      "agent": "underwriter",
+      "action": "save_risk_assessment",
+      "status": "ok",
+      "produces": {
+        "computed_result": "RA-247"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-07T10:00:00Z",
+      "node": "9_gate_c_decide",
+      "agent": "underwriter",
+      "action": "propose_decision",
+      "status": "ok",
+      "reads": [
+        "RA-247"
+      ],
+      "injection": "INJ-1",
+      "note": "proposer role set, but to an authorized role (underwriter)"
+    }
+  ]
+}

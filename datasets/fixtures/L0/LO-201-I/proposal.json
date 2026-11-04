@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-201-I",
+  "boundary": "submit_to_underwriting",
+  "proposed_at": "2026-09-11T11:00:00Z",
+  "actor": {
+    "id": "bot.processing",
+    "kind": "bot",
+    "role": "processing_bot"
+  },
+  "package": {
+    "action": "submit_to_underwriting",
+    "readiness_ref": "R-1042-a",
+    "completeness": {
+      "status": "complete"
+    },
+    "documents_cited": [
+      "ID-1042",
+      "INC-1042",
+      "VAL-1042"
+    ]
+  }
+}

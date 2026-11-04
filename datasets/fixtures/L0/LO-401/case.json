@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-401",
+  "workflow": "W1",
+  "boundary": "submit_to_underwriting",
+  "family_ids": [
+    "F-DUP"
+  ],
+  "group_id": "G-401",
+  "contrast_role": "violation",
+  "split": "dev",
+  "revision": 1,
+  "loan_keys": {
+    "loan_id": "LN-3005",
+    "borrower_id": "BRW-411"
+  },
+  "notes": "Dual-channel near-duplicate: the same bank statement (account 4821, period 2026-07) arrived by email and by portal under different document ids; the email copy is an older generation, and asset verification was computed from it.",
+  "variation": "V2",
+  "issue_id": "DUP-bankstmt"
+}

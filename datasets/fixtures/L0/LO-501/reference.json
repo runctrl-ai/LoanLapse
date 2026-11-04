@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-501",
+  "boundary": "mark_conditions_cleared",
+  "reference_kind": "DENY",
+  "reference_contracts": [
+    "requireAuthorizedActor"
+  ],
+  "rationale": "The proposer role document_collection_bot is not in the allowed proposer set for mark_conditions_cleared. No evidence fix makes this proposal valid.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "resume_condition": "An authorized actor (conditions bot, processor, or underwriter) submits a fresh clearance proposal.",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "Every step the collection bot performed was within its collection scope, and the underlying resolution is valid. The violation exists only in the actor-boundary composition: the role that legitimately did the legwork carries no clearance authority, and no package field reveals that."
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LOSS-stale-cache__defect-01",
+  "documents": [
+    {
+      "id": "ID-7210",
+      "type": "identity",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-01T10:00:00Z",
+      "generated_at": "2026-09-01T10:00:00Z",
+      "payload": {
+        "name": "K. Novak"
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "RA-210",
+      "type": "risk_assessment",
+      "computed_at": "2026-09-06T10:00:00Z",
+      "computed_at_seq": 3,
+      "inputs": {},
+      "derived_from": [],
+      "outcome": {
+        "recommendation": "approve",
+        "kyb": "clear"
+      }
+    }
+  ],
+  "connectors": [
+    {
+      "name": "kyb_registry",
+      "status": "ok",
+      "attempted_at": "2026-09-06T09:00:00Z",
+      "result": {
+        "records": [
+          {
+            "entity": "clear"
+          }
+        ],
+        "as_of": "2026-01-01",
+        "cached": true
+      }
+    }
+  ]
+}

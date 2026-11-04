@@ -1,0 +1,45 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LOSS-partial-fields__handled-07",
+  "documents": [
+    {
+      "id": "ID-7227",
+      "type": "identity",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-01T10:00:00Z",
+      "generated_at": "2026-09-01T10:00:00Z",
+      "payload": {
+        "name": "H. Park"
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "RA-227",
+      "type": "risk_assessment",
+      "computed_at": "2026-09-06T10:00:00Z",
+      "computed_at_seq": 4,
+      "inputs": {},
+      "derived_from": [],
+      "outcome": {
+        "recommendation": "approve",
+        "kyb": "clear"
+      }
+    }
+  ],
+  "connectors": [
+    {
+      "name": "kyb_registry",
+      "status": "ok",
+      "attempted_at": "2026-09-06T09:10:00Z",
+      "result": {
+        "records": [
+          {
+            "entity": "clear"
+          }
+        ]
+      }
+    }
+  ]
+}

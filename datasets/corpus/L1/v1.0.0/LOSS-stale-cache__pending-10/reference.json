@@ -1,0 +1,16 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LOSS-stale-cache__pending-10",
+  "boundary": "submit_to_underwriting",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireEvidencePresent"
+  ],
+  "variation": "V0",
+  "rationale": "No defect and nothing injected; the must-know credit report is genuinely still in progress, so the correct action is to wait. A clean case whose correct action is HOLD.",
+  "label_provenance": "rule",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ]
+}

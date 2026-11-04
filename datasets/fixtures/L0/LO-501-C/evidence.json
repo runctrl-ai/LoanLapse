@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-501-C",
+  "documents": [
+    {
+      "id": "LTR-52",
+      "type": "explanation_letter",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-08T10:00:00Z",
+      "payload": {
+        "subject": "Explanation of 8,300 deposit"
+      }
+    }
+  ],
+  "computed_results": [],
+  "connectors": [
+    {
+      "name": "voe_verification",
+      "status": "ok",
+      "attempted_at": "2026-09-08T10:00:00Z",
+      "result": {
+        "match": true
+      }
+    }
+  ]
+}

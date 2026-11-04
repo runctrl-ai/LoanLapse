@@ -1,0 +1,45 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LOSS-empty-success__handled-05",
+  "documents": [
+    {
+      "id": "ID-7203",
+      "type": "identity",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-01T10:00:00Z",
+      "generated_at": "2026-09-01T10:00:00Z",
+      "payload": {
+        "name": "D. Silva"
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "RA-203",
+      "type": "risk_assessment",
+      "computed_at": "2026-09-06T10:00:00Z",
+      "computed_at_seq": 4,
+      "inputs": {},
+      "derived_from": [],
+      "outcome": {
+        "recommendation": "approve",
+        "kyb": "clear"
+      }
+    }
+  ],
+  "connectors": [
+    {
+      "name": "kyb_registry",
+      "status": "ok",
+      "attempted_at": "2026-09-06T09:10:00Z",
+      "result": {
+        "records": [
+          {
+            "entity": "clear"
+          }
+        ]
+      }
+    }
+  ]
+}

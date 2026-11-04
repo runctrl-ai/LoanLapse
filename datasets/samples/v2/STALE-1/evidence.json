@@ -1,0 +1,100 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "STALE-1",
+  "documents": [
+    {
+      "id": "ID-1042",
+      "type": "identity",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-02T10:00:00Z",
+      "generated_at": "2026-09-02T10:00:00Z",
+      "payload": {
+        "name": "D. Silva"
+      }
+    },
+    {
+      "id": "INC-1042",
+      "type": "income",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-02T10:00:00Z",
+      "generated_at": "2026-09-02T10:00:00Z",
+      "payload": {
+        "periods": [
+          "2026-07",
+          "2026-08"
+        ],
+        "monthly": 3900
+      }
+    },
+    {
+      "id": "INC-1042",
+      "type": "income",
+      "version": 2,
+      "channel": "portal",
+      "received_at": "2026-09-10T10:00:00Z",
+      "generated_at": "2026-09-10T10:00:00Z",
+      "payload": {
+        "periods": [
+          "2026-07",
+          "2026-08"
+        ],
+        "monthly": 5200,
+        "note": "updated paystub"
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "INC-CALC-1",
+      "type": "income_figure",
+      "computed_at": "2026-09-03T10:00:00Z",
+      "computed_at_seq": 2,
+      "inputs": {
+        "INC-1042": 1
+      },
+      "derived_from": [],
+      "outcome": {
+        "monthly": 3900
+      }
+    },
+    {
+      "id": "DTI-1",
+      "type": "dti",
+      "computed_at": "2026-09-03T10:00:00Z",
+      "computed_at_seq": 3,
+      "inputs": {},
+      "derived_from": [
+        "INC-CALC-1"
+      ],
+      "outcome": {
+        "dti": 0.44
+      }
+    },
+    {
+      "id": "R-1",
+      "type": "readiness",
+      "computed_at": "2026-09-04T10:00:00Z",
+      "computed_at_seq": 4,
+      "inputs": {
+        "ID-1042": 1,
+        "INC-1042": 1
+      },
+      "derived_from": [
+        "DTI-1"
+      ],
+      "outcome": "ready"
+    }
+  ],
+  "connectors": [
+    {
+      "name": "credit_report",
+      "status": "ok",
+      "attempted_at": "2026-09-04T12:00:00Z",
+      "result": {
+        "adverse_findings": []
+      }
+    }
+  ]
+}

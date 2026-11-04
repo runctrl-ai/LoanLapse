@@ -1,0 +1,21 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "STALE-appraisal-at-decision__clean-09",
+  "boundary": "submit_to_underwriting",
+  "proposed_at": "2026-09-05T10:00:00Z",
+  "actor": {
+    "id": "user.lo1",
+    "role": "loan_officer"
+  },
+  "package": {
+    "action": "submit_to_underwriting",
+    "completeness": {
+      "status": "complete"
+    },
+    "documents_cited": [
+      "ID-1020",
+      "INC-1020"
+    ],
+    "readiness_ref": "R-1020"
+  }
+}

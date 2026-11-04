@@ -1,0 +1,21 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "SOD-sop-routes-to-bot__handled-07",
+  "injections": [
+    {
+      "injection_id": "INJ-1",
+      "variation": "V2",
+      "kind": "internal",
+      "at_seq": 3,
+      "at": "2026-09-09T10:00:00Z",
+      "agent_state": {
+        "node": "8_gate_b_clear",
+        "mode": "running"
+      },
+      "resume": "resume_from_state",
+      "payload": {
+        "set_proposer_role": "processor"
+      }
+    }
+  ]
+}

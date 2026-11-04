@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-501-C",
+  "obligations": [
+    {
+      "id": "C-52",
+      "kind": "condition",
+      "type": "large_deposit_explanation",
+      "status_recorded": "resolved",
+      "opened_at": "2026-09-04T10:00:00Z",
+      "opened_by": {
+        "step": "underwriting_review",
+        "role": "underwriting_system"
+      },
+      "enforce_at": [
+        "mark_conditions_cleared"
+      ],
+      "clearable_by": [
+        "processor",
+        "underwriter"
+      ],
+      "description": "Large deposit requires an explanation letter.",
+      "payload": {
+        "deposit_amount": 8300
+      },
+      "resolution": {
+        "by": {
+          "id": "user.proc1",
+          "role": "processor"
+        },
+        "evidence_ref": {
+          "document_id": "LTR-52",
+          "version": 1
+        },
+        "at": "2026-09-08T14:00:00Z"
+      }
+    }
+  ]
+}

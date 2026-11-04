@@ -1,0 +1,56 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "STALE-appraisal-at-decision__clean-09",
+  "documents": [
+    {
+      "id": "ID-1020",
+      "type": "identity",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-01T10:00:00Z",
+      "generated_at": "2026-09-01T10:00:00Z",
+      "payload": {
+        "name": "A. Rivera"
+      }
+    },
+    {
+      "id": "INC-1020",
+      "type": "income",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-02T10:00:00Z",
+      "generated_at": "2026-09-02T10:00:00Z",
+      "payload": {
+        "periods": [
+          "2026-07",
+          "2026-08"
+        ],
+        "monthly": 5000
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "R-1020",
+      "type": "readiness",
+      "computed_at": "2026-09-04T10:00:00Z",
+      "computed_at_seq": 3,
+      "inputs": {
+        "ID-1020": 1,
+        "INC-1020": 1
+      },
+      "derived_from": [],
+      "outcome": "ready"
+    }
+  ],
+  "connectors": [
+    {
+      "name": "credit_report",
+      "status": "ok",
+      "attempted_at": "2026-09-04T11:00:00Z",
+      "result": {
+        "adverse_findings": []
+      }
+    }
+  ]
+}

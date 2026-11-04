@@ -1,0 +1,22 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "STALE-income-cascade__defect-03",
+  "boundary": "submit_to_underwriting",
+  "proposed_at": "2026-09-11T10:00:00Z",
+  "actor": {
+    "id": "user.lo1",
+    "role": "loan_officer"
+  },
+  "package": {
+    "action": "submit_to_underwriting",
+    "readiness_ref": "R-1003",
+    "dti_ref": "DTI-3",
+    "completeness": {
+      "status": "complete"
+    },
+    "documents_cited": [
+      "ID-1003",
+      "INC-1003"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "COMP-2",
+  "boundary": "submit_to_underwriting",
+  "ground_truth": "ALLOW",
+  "contracts_fired": [],
+  "variation": "V0",
+  "rationale": "Income covers both required months; the completeness claim matches a recount. Nothing to hold.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [],
+  "resume_condition": null
+}

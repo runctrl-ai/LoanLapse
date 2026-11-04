@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-601-C",
+  "boundary": "submit_to_underwriting",
+  "proposed_at": "2026-09-07T11:00:00Z",
+  "actor": {
+    "id": "bot.processing",
+    "kind": "bot",
+    "role": "processing_bot"
+  },
+  "package": {
+    "action": "submit_to_underwriting",
+    "readiness_ref": "R-5003-a",
+    "completeness": {
+      "status": "complete"
+    },
+    "documents_cited": [
+      "ID-5003",
+      "INC-5003"
+    ]
+  }
+}

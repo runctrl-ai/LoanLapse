@@ -1,0 +1,22 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "UNK-voe-error-at-clearance__defect-03",
+  "injections": [
+    {
+      "injection_id": "INJ-1",
+      "variation": "V3",
+      "kind": "external",
+      "at_seq": 2,
+      "at": "2026-09-12T11:55:00Z",
+      "agent_state": {
+        "node": "7_conditions",
+        "mode": "running"
+      },
+      "resume": "resume_from_state",
+      "payload": {
+        "connector": "voe_verification",
+        "status": "error"
+      }
+    }
+  ]
+}

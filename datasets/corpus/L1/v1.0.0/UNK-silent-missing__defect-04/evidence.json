@@ -1,0 +1,35 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "UNK-silent-missing__defect-04",
+  "documents": [
+    {
+      "id": "INC-3070",
+      "type": "income",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-02T10:00:00Z",
+      "generated_at": "2026-09-02T10:00:00Z",
+      "payload": {
+        "periods": [
+          "2026-07",
+          "2026-08"
+        ],
+        "monthly": 8500
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "R-3070",
+      "type": "readiness",
+      "computed_at": "2026-09-03T10:00:00Z",
+      "computed_at_seq": 2,
+      "inputs": {
+        "INC-3070": 1
+      },
+      "derived_from": [],
+      "outcome": "ready"
+    }
+  ],
+  "connectors": []
+}

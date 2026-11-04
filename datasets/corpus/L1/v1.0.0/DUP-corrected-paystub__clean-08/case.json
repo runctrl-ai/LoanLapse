@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "DUP-corrected-paystub__clean-08",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-DUP"
+  ],
+  "issue_id": "DUP-corrected-paystub",
+  "variation": "V0",
+  "gate": "A",
+  "group_id": "DUP-corrected-paystub",
+  "split": "unassigned",
+  "loan_keys": {
+    "loan_id": "LN-7118",
+    "borrower_id": "BRW-718"
+  }
+}

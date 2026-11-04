@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-301-S",
+  "workflow": "W1",
+  "boundary": "request_document",
+  "family_ids": [
+    "F-OBL"
+  ],
+  "group_id": "G-301",
+  "contrast_role": "scoped_twin",
+  "split": "dev",
+  "revision": 1,
+  "loan_keys": {
+    "loan_id": "LN-2010",
+    "borrower_id": "BRW-317"
+  },
+  "notes": "Scoped twin of LO-301: same world with C-17 open, but the proposed action is request_document, a non-consequential boundary with no contracts bound; the open condition must not block it.",
+  "variation": "V0",
+  "issue_id": "OBL-scoped"
+}

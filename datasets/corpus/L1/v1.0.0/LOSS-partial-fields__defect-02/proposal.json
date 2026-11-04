@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LOSS-partial-fields__defect-02",
+  "boundary": "submit_to_underwriting",
+  "proposed_at": "2026-09-04T10:00:00Z",
+  "actor": {
+    "id": "user.lo1",
+    "role": "loan_officer"
+  },
+  "package": {
+    "action": "submit_to_underwriting",
+    "readiness_ref": "R-7222",
+    "completeness": {
+      "status": "complete"
+    },
+    "documents_cited": [
+      "ID-7222"
+    ]
+  }
+}

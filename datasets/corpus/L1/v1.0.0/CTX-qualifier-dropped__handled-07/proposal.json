@@ -1,0 +1,15 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "CTX-qualifier-dropped__handled-07",
+  "boundary": "render_decision",
+  "proposed_at": "2026-09-07T10:00:00Z",
+  "actor": {
+    "id": "user.uw1",
+    "role": "underwriter"
+  },
+  "package": {
+    "action": "render_decision",
+    "decision": "hold_for_dispute",
+    "summary_ref": "S2"
+  }
+}

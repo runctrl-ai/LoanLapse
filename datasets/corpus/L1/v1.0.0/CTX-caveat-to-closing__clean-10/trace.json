@@ -1,0 +1,57 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "CTX-caveat-to-closing__clean-10",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-02T10:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "record_disclosure",
+      "status": "ok",
+      "produces": {
+        "document": "DISC-6197"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-05T10:00:00Z",
+      "node": "4_processing",
+      "agent": "loan_officer",
+      "action": "summarise_for_underwriting",
+      "status": "ok",
+      "produces": {
+        "computed_result": "S1"
+      },
+      "reads": [
+        "DISC-6197"
+      ]
+    },
+    {
+      "seq": 3,
+      "at": "2026-09-06T10:00:00Z",
+      "node": "6_risk",
+      "agent": "underwriter",
+      "action": "summarise_risk_profile",
+      "status": "ok",
+      "produces": {
+        "computed_result": "S2"
+      },
+      "reads": [
+        "S1"
+      ],
+      "note": "qualifier preserved"
+    },
+    {
+      "seq": 4,
+      "at": "2026-09-07T10:00:00Z",
+      "node": "9_gate_c_decide",
+      "agent": "underwriter",
+      "action": "propose_decision",
+      "status": "ok",
+      "reads": [
+        "S2"
+      ]
+    }
+  ]
+}

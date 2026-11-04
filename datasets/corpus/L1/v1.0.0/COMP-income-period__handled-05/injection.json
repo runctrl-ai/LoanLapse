@@ -1,0 +1,21 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "COMP-income-period__handled-05",
+  "injections": [
+    {
+      "injection_id": "INJ-1",
+      "variation": "V2",
+      "kind": "internal",
+      "at_seq": 2,
+      "at": "2026-09-05T10:00:00Z",
+      "agent_state": {
+        "node": "3_intake",
+        "mode": "running"
+      },
+      "resume": "resume_from_state",
+      "payload": {
+        "document": "BS-2938"
+      }
+    }
+  ]
+}

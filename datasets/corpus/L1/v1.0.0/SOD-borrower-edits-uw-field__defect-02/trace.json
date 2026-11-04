@@ -1,0 +1,36 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "SOD-borrower-edits-uw-field__defect-02",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-02T10:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "LTR-8255"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-04T10:00:00Z",
+      "node": "4_processing",
+      "agent": "borrower",
+      "action": "edit_risk_field",
+      "status": "ok",
+      "injection": "INJ-1",
+      "note": "borrower edits an underwriter-owned risk field"
+    },
+    {
+      "seq": 3,
+      "at": "2026-09-08T11:00:00Z",
+      "node": "5_gate_a_submit",
+      "agent": "borrower",
+      "action": "propose_submit",
+      "status": "ok",
+      "note": "borrower-side actor proposes at the gate"
+    }
+  ]
+}

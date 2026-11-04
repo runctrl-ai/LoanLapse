@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "DEP-1",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-DEP"
+  ],
+  "issue_id": "DEP-override",
+  "variation": "V2",
+  "gate": "C",
+  "group_id": "DEP-1",
+  "split": "dev",
+  "notes": "Cross-state (dependency invalidation). The underwriter edits an accepted income value in place after the risk assessment was computed; the risk numbers are never recomputed, and the decision uses the stale assessment."
+}

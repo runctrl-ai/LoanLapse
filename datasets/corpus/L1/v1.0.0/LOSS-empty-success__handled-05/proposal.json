@@ -1,0 +1,15 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LOSS-empty-success__handled-05",
+  "boundary": "render_decision",
+  "proposed_at": "2026-09-07T10:00:00Z",
+  "actor": {
+    "id": "user.uw1",
+    "role": "underwriter"
+  },
+  "package": {
+    "action": "render_decision",
+    "decision": "approve",
+    "risk_ref": "RA-203"
+  }
+}

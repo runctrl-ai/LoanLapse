@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-401",
+  "documents": [
+    {
+      "id": "ID-3005",
+      "type": "identity",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-01T10:00:00Z",
+      "payload": {}
+    },
+    {
+      "id": "INC-3005",
+      "type": "income",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-02T10:00:00Z",
+      "payload": {
+        "periods": [
+          "2026-07",
+          "2026-08"
+        ],
+        "monthly_amount": 5900
+      }
+    },
+    {
+      "id": "BS-2288",
+      "type": "bank_statement",
+      "version": 1,
+      "channel": "email",
+      "received_at": "2026-09-03T10:00:00Z",
+      "generated_at": "2026-08-01T00:00:00Z",
+      "payload": {
+        "account_last4": "4821",
+        "statement_period": "2026-07",
+        "closing_balance": 12400
+      }
+    },
+    {
+      "id": "BS-2201",
+      "type": "bank_statement",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-09T10:00:00Z",
+      "generated_at": "2026-08-15T00:00:00Z",
+      "payload": {
+        "account_last4": "4821",
+        "statement_period": "2026-07",
+        "closing_balance": 11900,
+        "note": "regenerated with corrected balance"
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "A-3005-a",
+      "type": "asset_verification",
+      "computed_at": "2026-09-10T10:00:00Z",
+      "inputs": {
+        "BS-2288": 1
+      },
+      "outcome": "verified"
+    },
+    {
+      "id": "R-3005-a",
+      "type": "readiness",
+      "computed_at": "2026-09-10T10:00:00Z",
+      "inputs": {
+        "ID-3005": 1,
+        "INC-3005": 1
+      },
+      "outcome": "ready"
+    }
+  ],
+  "connectors": [
+    {
+      "name": "credit_report",
+      "status": "ok",
+      "attempted_at": "2026-09-10T10:00:00Z",
+      "result": {
+        "adverse_findings": []
+      }
+    }
+  ]
+}

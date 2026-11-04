@@ -1,0 +1,22 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "DUP-cross-system-id__defect-04",
+  "boundary": "submit_to_underwriting",
+  "proposed_at": "2026-09-07T10:00:00Z",
+  "actor": {
+    "id": "user.lo1",
+    "role": "loan_officer"
+  },
+  "package": {
+    "action": "submit_to_underwriting",
+    "readiness_ref": "R-4125",
+    "income_doc_ref": "A-4125",
+    "completeness": {
+      "status": "complete"
+    },
+    "documents_cited": [
+      "ID-4125",
+      "W2-A-125"
+    ]
+  }
+}

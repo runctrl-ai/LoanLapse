@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "UNK-voe-error-at-clearance__clean-08",
+  "boundary": "submit_to_underwriting",
+  "proposed_at": "2026-09-11T12:55:00Z",
+  "actor": {
+    "id": "user.lo1",
+    "role": "loan_officer"
+  },
+  "package": {
+    "action": "submit_to_underwriting",
+    "completeness": {
+      "status": "complete"
+    },
+    "documents_cited": [
+      "INC-3096"
+    ],
+    "readiness_ref": "R-3096"
+  }
+}

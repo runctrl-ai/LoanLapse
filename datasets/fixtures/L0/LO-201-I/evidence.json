@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-201-I",
+  "documents": [
+    {
+      "id": "ID-1042",
+      "type": "identity",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-01T10:00:00Z",
+      "payload": {}
+    },
+    {
+      "id": "INC-1042",
+      "type": "income",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-02T10:00:00Z",
+      "payload": {
+        "periods": [
+          "2026-07",
+          "2026-08"
+        ],
+        "monthly_amount": 5400
+      }
+    },
+    {
+      "id": "VAL-1042",
+      "type": "valuation",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-03T10:00:00Z",
+      "payload": {
+        "value": 412000
+      }
+    },
+    {
+      "id": "CPR-1042",
+      "type": "contact_preference",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-01T10:00:00Z",
+      "payload": {
+        "preference": "email"
+      }
+    },
+    {
+      "id": "CPR-1042",
+      "type": "contact_preference",
+      "version": 2,
+      "channel": "portal",
+      "received_at": "2026-09-10T10:00:00Z",
+      "payload": {
+        "preference": "phone"
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "R-1042-a",
+      "type": "readiness",
+      "computed_at": "2026-09-05T10:00:00Z",
+      "inputs": {
+        "ID-1042": 1,
+        "INC-1042": 1,
+        "VAL-1042": 1
+      },
+      "outcome": "ready"
+    }
+  ],
+  "connectors": [
+    {
+      "name": "credit_report",
+      "status": "ok",
+      "attempted_at": "2026-09-05T10:00:00Z",
+      "result": {
+        "adverse_findings": []
+      }
+    }
+  ]
+}

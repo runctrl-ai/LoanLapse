@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-401",
+  "boundary": "submit_to_underwriting",
+  "proposed_at": "2026-09-11T11:00:00Z",
+  "actor": {
+    "id": "bot.processing",
+    "kind": "bot",
+    "role": "processing_bot"
+  },
+  "package": {
+    "action": "submit_to_underwriting",
+    "readiness_ref": "R-3005-a",
+    "asset_ref": "A-3005-a",
+    "completeness": {
+      "status": "complete"
+    },
+    "documents_cited": [
+      "ID-3005",
+      "INC-3005",
+      "BS-2288"
+    ]
+  }
+}

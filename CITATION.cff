@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use LoanLapse, please cite it as below."
+title: "LoanLapse: A Synthetic Dataset of Control Failures in Agentic Loan-Underwriting Workflows"
+type: dataset
+version: "1.0.0"
+license: CC-BY-4.0
+repository-code: "https://github.com/runctrl-ai/LoanLapse"
+url: "https://huggingface.co/datasets/RunCtrl-AI/LoanLapse"
+authors:
+  - family-names: Kundeti
+    given-names: Pavan Kumar
+  - family-names: Grandhi
+    given-names: Sri Sai Charith
+  - family-names: Gupta
+    given-names: Rajesh
+  - family-names: Kumar
+    given-names: Sumit

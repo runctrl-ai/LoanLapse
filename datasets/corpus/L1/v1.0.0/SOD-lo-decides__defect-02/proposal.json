@@ -1,0 +1,15 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "SOD-lo-decides__defect-02",
+  "boundary": "render_decision",
+  "proposed_at": "2026-09-08T11:00:00Z",
+  "actor": {
+    "id": "user.lo1",
+    "role": "loan_officer"
+  },
+  "package": {
+    "action": "render_decision",
+    "decision": "approve",
+    "risk_ref": "RA-244"
+  }
+}

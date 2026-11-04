@@ -1,0 +1,53 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LOSS-2",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-01T10:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "ID-7001"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-06T09:00:00Z",
+      "node": "6_risk",
+      "agent": "underwriter",
+      "action": "call_kyb_registry",
+      "status": "ok",
+      "produces": {
+        "connector_call": "kyb_registry"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-09-06T10:00:00Z",
+      "node": "6_risk",
+      "agent": "underwriter",
+      "action": "save_risk_assessment",
+      "status": "ok",
+      "produces": {
+        "computed_result": "RA-7001"
+      },
+      "reads": [
+        "kyb_registry"
+      ]
+    },
+    {
+      "seq": 4,
+      "at": "2026-09-07T10:00:00Z",
+      "node": "9_gate_c_decide",
+      "agent": "underwriter",
+      "action": "propose_decision",
+      "status": "ok",
+      "reads": [
+        "RA-7001"
+      ]
+    }
+  ]
+}

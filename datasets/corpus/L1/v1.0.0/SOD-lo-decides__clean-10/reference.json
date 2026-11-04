@@ -1,0 +1,10 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "SOD-lo-decides__clean-10",
+  "boundary": "render_decision",
+  "ground_truth": "ALLOW",
+  "contracts_fired": [],
+  "variation": "V0",
+  "rationale": "A permitted role (underwriter) proposes the decision at render_decision; the actor is authorized.",
+  "label_provenance": "rule"
+}

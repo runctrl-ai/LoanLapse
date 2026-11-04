@@ -1,0 +1,42 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "DEP-2",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-02T10:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "INC-8001"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-06T10:00:00Z",
+      "node": "6_risk",
+      "agent": "underwriter",
+      "action": "save_risk_assessment",
+      "status": "ok",
+      "produces": {
+        "computed_result": "RA-8001"
+      },
+      "reads": [
+        "INC-8001"
+      ]
+    },
+    {
+      "seq": 3,
+      "at": "2026-09-09T10:00:00Z",
+      "node": "9_gate_c_decide",
+      "agent": "underwriter",
+      "action": "propose_decision",
+      "status": "ok",
+      "reads": [
+        "RA-8001"
+      ]
+    }
+  ]
+}

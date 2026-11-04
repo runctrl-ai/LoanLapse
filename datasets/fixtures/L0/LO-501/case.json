@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-501",
+  "workflow": "W2",
+  "boundary": "mark_conditions_cleared",
+  "family_ids": [
+    "F-SOD"
+  ],
+  "group_id": "G-501",
+  "contrast_role": "violation",
+  "split": "dev",
+  "revision": 1,
+  "loan_keys": {
+    "loan_id": "LN-4001",
+    "borrower_id": "BRW-502"
+  },
+  "notes": "Authority violation: the world state is genuinely clearable (C-52 validly resolved by a processor), but the clearance proposal comes from the document-collection bot, which has no authority at this boundary.",
+  "variation": "V2",
+  "issue_id": "SOD-clear"
+}

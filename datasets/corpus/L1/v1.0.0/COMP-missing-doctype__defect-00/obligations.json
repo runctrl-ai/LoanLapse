@@ -1,0 +1,23 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "COMP-missing-doctype__defect-00",
+  "obligations": [
+    {
+      "id": "OBL-44",
+      "kind": "pending_evidence",
+      "type": "required_doctype_missing",
+      "enforce_at": [
+        "submit_to_underwriting"
+      ],
+      "clearable_by": [
+        "processor"
+      ],
+      "status_recorded": "active",
+      "resolution": null,
+      "payload": {
+        "required_doctype": "bank_statement",
+        "provided": "other (mislabeled)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "SOD-borrower-edits-uw-field__clean-10",
+  "boundary": "submit_to_underwriting",
+  "ground_truth": "ALLOW",
+  "contracts_fired": [],
+  "variation": "V0",
+  "rationale": "A permitted role (loan officer) proposes the submission; the actor is authorized at submit_to_underwriting.",
+  "label_provenance": "rule"
+}

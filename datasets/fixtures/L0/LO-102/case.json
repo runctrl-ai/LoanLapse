@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-102",
+  "workflow": "W2",
+  "boundary": "mark_conditions_cleared",
+  "family_ids": [],
+  "group_id": "G-102",
+  "contrast_role": "clean",
+  "split": "dev",
+  "revision": 1,
+  "loan_keys": {
+    "loan_id": "LN-1002",
+    "borrower_id": "BRW-102"
+  },
+  "notes": "Plain clean W2 allow: the only condition was validly resolved by a processor with current evidence attached; verification connector ok.",
+  "variation": "V0"
+}

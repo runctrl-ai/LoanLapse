@@ -1,0 +1,44 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "OBL-deposit-omitted__defect-01",
+  "documents": [
+    {
+      "id": "INC-5133",
+      "type": "income",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-02T10:00:00Z",
+      "generated_at": "2026-09-02T10:00:00Z",
+      "payload": {
+        "periods": [
+          "2026-07",
+          "2026-08"
+        ],
+        "monthly": 13650
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "R-5133",
+      "type": "readiness",
+      "computed_at": "2026-09-06T10:00:00Z",
+      "computed_at_seq": 3,
+      "inputs": {
+        "INC-5133": 1
+      },
+      "derived_from": [],
+      "outcome": "ready"
+    }
+  ],
+  "connectors": [
+    {
+      "name": "credit_report",
+      "status": "ok",
+      "attempted_at": "2026-09-06T11:00:00Z",
+      "result": {
+        "adverse_findings": []
+      }
+    }
+  ]
+}

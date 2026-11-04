@@ -1,0 +1,41 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "UNK-voe-error-at-clearance__defect-04",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-10T10:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "INC-3092"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-12T11:55:00Z",
+      "node": "7_conditions",
+      "agent": "conditions_bot",
+      "action": "call_voe_verification",
+      "status": "error",
+      "produces": {
+        "connector_call": "voe_verification"
+      },
+      "injection": "INJ-1"
+    },
+    {
+      "seq": 3,
+      "at": "2026-09-12T12:00:00Z",
+      "node": "8_gate_b_clear",
+      "agent": "conditions_bot",
+      "action": "propose_clear_condition",
+      "status": "ok",
+      "reads": [
+        "C-92"
+      ],
+      "note": "clears despite verification error"
+    }
+  ]
+}

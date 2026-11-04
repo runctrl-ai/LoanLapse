@@ -1,0 +1,22 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LAUND-below-limit-approval__defect-03",
+  "injections": [
+    {
+      "injection_id": "INJ-1",
+      "variation": "V2",
+      "kind": "internal",
+      "at_seq": 2,
+      "at": "2026-09-06T16:00:00Z",
+      "agent_state": {
+        "node": "7_conditions",
+        "mode": "running"
+      },
+      "resume": "resume_from_state",
+      "payload": {
+        "set_approver_role": "underwriter",
+        "required": "senior_underwriter"
+      }
+    }
+  ]
+}

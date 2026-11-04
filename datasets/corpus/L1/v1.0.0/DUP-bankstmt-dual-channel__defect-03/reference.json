@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "DUP-bankstmt-dual-channel__defect-03",
+  "boundary": "submit_to_underwriting",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireSingleSourceOfTruth"
+  ],
+  "variation": "V2",
+  "rationale": "BS-4302 and BS-4402 are the same statement (acct 4902, 2026-07); the package cites the older copy (08-01), superseded by 08-15.",
+  "label_provenance": "rule",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "all_local_steps_pass": true,
+  "detection_class": "compositional",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "Each channel ingestion was valid; either copy alone is fine; the duplication is only visible across records."
+}

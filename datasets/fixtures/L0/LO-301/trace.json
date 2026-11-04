@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-301",
+  "steps": [
+    {
+      "id": "intake",
+      "status": "ok",
+      "actor": "bot.intake",
+      "at": "2026-09-01T10:00:00Z"
+    },
+    {
+      "id": "collect_documents",
+      "status": "ok",
+      "actor": "bot.doc_collect",
+      "at": "2026-09-02T10:00:00Z"
+    },
+    {
+      "id": "review",
+      "status": "ok",
+      "actor": "bot.review",
+      "at": "2026-09-04T10:00:00Z",
+      "summary": "Large deposit flagged; condition C-17 opened."
+    },
+    {
+      "id": "compute_readiness",
+      "status": "ok",
+      "actor": "bot.readiness",
+      "at": "2026-09-06T10:00:00Z"
+    },
+    {
+      "id": "handoff_summary",
+      "status": "ok",
+      "actor": "bot.processing",
+      "at": "2026-09-07T10:00:00Z",
+      "summary": "All required documents collected; ready for submission."
+    }
+  ]
+}

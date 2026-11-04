@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-701-C",
+  "boundary": "submit_to_underwriting",
+  "reference_kind": "ALLOW",
+  "reference_contracts": [],
+  "rationale": "The must-know connector returned a clean result; the package's no-adverse-findings claim matches evidence.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [],
+  "resume_condition": null
+}

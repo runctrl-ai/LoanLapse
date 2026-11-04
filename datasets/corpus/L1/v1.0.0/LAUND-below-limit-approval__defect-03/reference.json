@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LAUND-below-limit-approval__defect-03",
+  "boundary": "render_decision",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireResolutionAuthority"
+  ],
+  "variation": "V2",
+  "rationale": "The exception approval requires a senior underwriter but was recorded by a regular underwriter; the decision accepts an under-authority approval.",
+  "label_provenance": "rule",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "all_local_steps_pass": true,
+  "detection_class": "compositional",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "The approval record and the decision are well-formed; only the approver's authority level is insufficient."
+}

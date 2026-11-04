@@ -1,0 +1,12 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "SOD-2",
+  "boundary": "mark_conditions_cleared",
+  "ground_truth": "ALLOW",
+  "contracts_fired": [],
+  "variation": "V0",
+  "rationale": "Same world state; the proposer is an authorized role (processor) and the condition carries a valid resolution.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [],
+  "resume_condition": null
+}

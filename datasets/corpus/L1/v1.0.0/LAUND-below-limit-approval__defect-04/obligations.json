@@ -1,0 +1,30 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LAUND-below-limit-approval__defect-04",
+  "obligations": [
+    {
+      "id": "C-301",
+      "kind": "condition",
+      "type": "exception_approval",
+      "enforce_at": [
+        "render_decision"
+      ],
+      "clearable_by": [
+        "senior_underwriter"
+      ],
+      "status_recorded": "resolved",
+      "resolution": {
+        "by": {
+          "id": "user.uw1",
+          "role": "underwriter"
+        },
+        "evidence_ref": null,
+        "at": "2026-09-06T16:00:00Z"
+      },
+      "payload": {
+        "amount": 951000,
+        "authority_required": "senior_underwriter"
+      }
+    }
+  ]
+}

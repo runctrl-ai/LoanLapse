@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "DUP-cross-system-id__handled-05",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-03T10:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "BS-4326"
+      },
+      "note": "email 08-01"
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-09T10:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "BS-4426"
+      },
+      "injection": "INJ-1",
+      "note": "portal 08-15"
+    },
+    {
+      "seq": 3,
+      "at": "2026-09-10T10:00:00Z",
+      "node": "4_processing",
+      "agent": "loan_officer",
+      "action": "verify_assets",
+      "status": "ok",
+      "produces": {
+        "computed_result": "A-4126"
+      },
+      "reads": [
+        "BS-4426"
+      ],
+      "note": "cites latest copy"
+    },
+    {
+      "seq": 4,
+      "at": "2026-09-11T10:00:00Z",
+      "node": "5_gate_a_submit",
+      "agent": "loan_officer",
+      "action": "propose_submit",
+      "status": "ok",
+      "reads": [
+        "A-4126",
+        "R-4126"
+      ]
+    }
+  ]
+}

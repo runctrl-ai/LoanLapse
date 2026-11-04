@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-601-C",
+  "boundary": "submit_to_underwriting",
+  "reference_kind": "ALLOW",
+  "reference_contracts": [],
+  "rationale": "Income covers both required months, the obligation is satisfied with evidence attached, and readiness cites current versions.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [],
+  "resume_condition": null
+}

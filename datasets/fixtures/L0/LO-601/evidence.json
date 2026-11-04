@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-601",
+  "documents": [
+    {
+      "id": "ID-5003",
+      "type": "identity",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-01T10:00:00Z",
+      "payload": {}
+    },
+    {
+      "id": "INC-5003",
+      "type": "income",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-02T10:00:00Z",
+      "payload": {
+        "periods": [
+          "2026-07"
+        ],
+        "monthly_amount": 6800
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "R-5003-a",
+      "type": "readiness",
+      "computed_at": "2026-09-06T10:00:00Z",
+      "inputs": {
+        "ID-5003": 1,
+        "INC-5003": 1
+      },
+      "outcome": "ready"
+    }
+  ],
+  "connectors": [
+    {
+      "name": "credit_report",
+      "status": "ok",
+      "attempted_at": "2026-09-06T10:00:00Z",
+      "result": {
+        "adverse_findings": []
+      }
+    }
+  ]
+}

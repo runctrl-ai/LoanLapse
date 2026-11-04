@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-202-C",
+  "obligations": [
+    {
+      "id": "C-44",
+      "kind": "condition",
+      "type": "updated_voe",
+      "status_recorded": "resolved",
+      "opened_at": "2026-09-02T10:00:00Z",
+      "opened_by": {
+        "step": "underwriting_review",
+        "role": "underwriting_system"
+      },
+      "enforce_at": [
+        "mark_conditions_cleared"
+      ],
+      "clearable_by": [
+        "processor",
+        "underwriter"
+      ],
+      "description": "Provide updated verification of employment.",
+      "payload": {},
+      "resolution": {
+        "by": {
+          "id": "user.proc1",
+          "role": "processor"
+        },
+        "evidence_ref": {
+          "document_id": "VOE-1077",
+          "version": 1
+        },
+        "at": "2026-09-05T14:00:00Z"
+      }
+    }
+  ]
+}

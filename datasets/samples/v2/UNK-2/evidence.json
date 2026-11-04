@@ -1,0 +1,44 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "UNK-2",
+  "documents": [
+    {
+      "id": "INC-6008",
+      "type": "income",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-02T10:00:00Z",
+      "generated_at": "2026-09-02T10:00:00Z",
+      "payload": {
+        "periods": [
+          "2026-07",
+          "2026-08"
+        ],
+        "monthly": 5100
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "R-6008",
+      "type": "readiness",
+      "computed_at": "2026-09-03T10:00:00Z",
+      "computed_at_seq": 2,
+      "inputs": {
+        "INC-6008": 1
+      },
+      "derived_from": [],
+      "outcome": "ready"
+    }
+  ],
+  "connectors": [
+    {
+      "name": "credit_report",
+      "status": "ok",
+      "attempted_at": "2026-09-11T11:55:00Z",
+      "result": {
+        "adverse_findings": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-601",
+  "obligations": [
+    {
+      "id": "OBL-5003-INC",
+      "kind": "pending_evidence",
+      "type": "income_period_pending",
+      "status_recorded": "active",
+      "opened_at": "2026-09-02T10:00:00Z",
+      "opened_by": {
+        "step": "collect_documents",
+        "role": "document_collection_bot"
+      },
+      "enforce_at": [
+        "submit_to_underwriting"
+      ],
+      "clearable_by": [
+        "processor"
+      ],
+      "description": "August 2026 income documentation not yet received.",
+      "payload": {
+        "missing_period": "2026-08"
+      },
+      "resolution": null
+    }
+  ]
+}

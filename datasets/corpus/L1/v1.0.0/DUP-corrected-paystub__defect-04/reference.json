@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "DUP-corrected-paystub__defect-04",
+  "boundary": "submit_to_underwriting",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireSingleSourceOfTruth"
+  ],
+  "variation": "V2",
+  "rationale": "A corrected paystab (v2) supersedes the original; the package still relies on the v1-based readiness.",
+  "label_provenance": "rule",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "all_local_steps_pass": true,
+  "detection_class": "compositional",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "Each upload was valid; the correction was legitimate; only citing the superseded copy is wrong."
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-501-C",
+  "workflow": "W2",
+  "boundary": "mark_conditions_cleared",
+  "family_ids": [
+    "F-SOD"
+  ],
+  "group_id": "G-501",
+  "contrast_role": "clean_twin",
+  "split": "dev",
+  "revision": 1,
+  "loan_keys": {
+    "loan_id": "LN-4001",
+    "borrower_id": "BRW-502"
+  },
+  "notes": "Clean twin of LO-501: identical world; the clearance is proposed by a processor.",
+  "variation": "V0",
+  "issue_id": "SOD-clean"
+}

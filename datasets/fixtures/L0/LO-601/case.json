@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-601",
+  "workflow": "W1",
+  "boundary": "submit_to_underwriting",
+  "family_ids": [
+    "F-COMP"
+  ],
+  "group_id": "G-601",
+  "contrast_role": "violation",
+  "split": "dev",
+  "revision": 1,
+  "loan_keys": {
+    "loan_id": "LN-5003",
+    "borrower_id": "BRW-608"
+  },
+  "notes": "Completeness collapse: income evidence covers July only; the missing August period is recorded upstream as a pending-evidence obligation; the summary and package still claim income documentation is complete.",
+  "variation": "V1",
+  "issue_id": "COMP-period"
+}

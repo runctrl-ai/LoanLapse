@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-201",
+  "events": [
+    {
+      "type": "result_computed",
+      "result": {
+        "id": "R-1042-b",
+        "type": "readiness",
+        "computed_at": "2026-09-12T10:00:00Z",
+        "inputs": {
+          "ID-1042": 1,
+          "INC-1042": 2,
+          "VAL-1042": 1
+        },
+        "outcome": "ready"
+      }
+    }
+  ],
+  "package_patch": {
+    "readiness_ref": "R-1042-b"
+  }
+}

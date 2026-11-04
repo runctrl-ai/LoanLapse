@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LOSS-partial-fields__handled-07",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-LOSS"
+  ],
+  "issue_id": "LOSS-partial-fields",
+  "variation": "V3",
+  "gate": "C",
+  "group_id": "LOSS-partial-fields",
+  "split": "unassigned",
+  "loan_keys": {
+    "loan_id": "LN-7227",
+    "borrower_id": "BRW-827"
+  }
+}

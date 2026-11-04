@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "STALE-single-step-over-time__defect-02",
+  "documents": [
+    {
+      "id": "INC-1024",
+      "type": "income",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-02T10:00:00Z",
+      "generated_at": "2026-09-02T10:00:00Z",
+      "payload": {
+        "periods": [
+          "2026-07",
+          "2026-08"
+        ],
+        "monthly": 5600,
+        "as_of": "2026-09-02"
+      }
+    },
+    {
+      "id": "INC-1024",
+      "type": "income",
+      "version": 2,
+      "channel": "portal",
+      "received_at": "2026-09-11T10:00:00Z",
+      "generated_at": "2026-09-11T10:00:00Z",
+      "payload": {
+        "periods": [
+          "2026-07",
+          "2026-08"
+        ],
+        "monthly": 6000,
+        "as_of": "2026-09-11",
+        "note": "newer paystub on file"
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "R-1024",
+      "type": "readiness",
+      "computed_at": "2026-09-02T10:00:00Z",
+      "computed_at_seq": 2,
+      "inputs": {
+        "INC-1024": 1
+      },
+      "derived_from": [],
+      "outcome": "ready"
+    }
+  ],
+  "connectors": [
+    {
+      "name": "credit_report",
+      "status": "ok",
+      "attempted_at": "2026-09-12T09:45:00Z",
+      "result": {
+        "adverse_findings": []
+      }
+    }
+  ]
+}

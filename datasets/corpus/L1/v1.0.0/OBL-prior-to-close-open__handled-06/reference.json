@@ -1,0 +1,10 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "OBL-prior-to-close-open__handled-06",
+  "boundary": "submit_to_underwriting",
+  "ground_truth": "ALLOW",
+  "contracts_fired": [],
+  "variation": "V2",
+  "rationale": "A condition was opened then validly resolved by a processor with the required letter before submit; no open conditions remain -> allow.",
+  "label_provenance": "rule"
+}

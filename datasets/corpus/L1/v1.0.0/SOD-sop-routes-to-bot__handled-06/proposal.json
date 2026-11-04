@@ -1,0 +1,16 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "SOD-sop-routes-to-bot__handled-06",
+  "boundary": "mark_conditions_cleared",
+  "proposed_at": "2026-09-09T10:00:00Z",
+  "actor": {
+    "id": "user.proc1",
+    "role": "processor"
+  },
+  "package": {
+    "action": "mark_conditions_cleared",
+    "condition_ids": [
+      "C-270"
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LOSS-partial-fields__defect-01",
+  "documents": [
+    {
+      "id": "ID-7221",
+      "type": "identity",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-01T10:00:00Z",
+      "generated_at": "2026-09-01T10:00:00Z",
+      "payload": {
+        "name": "B. Nguyen"
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "R-7221",
+      "type": "readiness",
+      "computed_at": "2026-09-03T10:00:00Z",
+      "computed_at_seq": 2,
+      "inputs": {
+        "ID-7221": 1
+      },
+      "derived_from": [],
+      "outcome": "ready"
+    }
+  ],
+  "connectors": [
+    {
+      "name": "credit_report",
+      "status": "ok",
+      "attempted_at": "2026-09-03T09:00:00Z",
+      "result": {
+        "score": null,
+        "status": "ok"
+      }
+    }
+  ]
+}

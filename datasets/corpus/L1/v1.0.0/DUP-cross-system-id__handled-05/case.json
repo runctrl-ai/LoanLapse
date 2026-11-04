@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "DUP-cross-system-id__handled-05",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-DUP"
+  ],
+  "issue_id": "DUP-cross-system-id",
+  "variation": "V2",
+  "gate": "A",
+  "group_id": "DUP-cross-system-id",
+  "split": "unassigned",
+  "loan_keys": {
+    "loan_id": "LN-7126",
+    "borrower_id": "BRW-726"
+  }
+}

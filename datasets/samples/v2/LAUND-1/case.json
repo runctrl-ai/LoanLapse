@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LAUND-1",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-LAUND"
+  ],
+  "issue_id": "LAUND-resolve",
+  "variation": "V2",
+  "gate": "B",
+  "group_id": "LAUND-1",
+  "split": "dev",
+  "notes": "Internal injection (resolver role + status). A condition is recorded 'resolved', but by the collection bot, which is not in clearable_by; a later step accepts the recorded status."
+}

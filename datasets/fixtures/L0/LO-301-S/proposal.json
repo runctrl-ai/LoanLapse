@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-301-S",
+  "boundary": "request_document",
+  "proposed_at": "2026-09-07T11:00:00Z",
+  "actor": {
+    "id": "bot.processing",
+    "kind": "bot",
+    "role": "processing_bot"
+  },
+  "package": {
+    "action": "request_document",
+    "document_type": "explanation_letter",
+    "reason": "Condition C-17 requires an explanation letter."
+  }
+}

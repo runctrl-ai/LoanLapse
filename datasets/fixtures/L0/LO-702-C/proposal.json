@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-702-C",
+  "boundary": "mark_conditions_cleared",
+  "proposed_at": "2026-09-12T13:00:00Z",
+  "actor": {
+    "id": "bot.conditions",
+    "kind": "bot",
+    "role": "conditions_bot"
+  },
+  "package": {
+    "action": "mark_conditions_cleared",
+    "condition_ids": [
+      "C-63"
+    ]
+  }
+}

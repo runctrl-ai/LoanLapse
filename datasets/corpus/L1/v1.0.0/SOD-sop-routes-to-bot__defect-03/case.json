@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "SOD-sop-routes-to-bot__defect-03",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-SOD"
+  ],
+  "issue_id": "SOD-sop-routes-to-bot",
+  "variation": "V1",
+  "gate": "B",
+  "group_id": "SOD-sop-routes-to-bot",
+  "split": "unassigned",
+  "loan_keys": {
+    "loan_id": "LN-7267",
+    "borrower_id": "BRW-867"
+  }
+}

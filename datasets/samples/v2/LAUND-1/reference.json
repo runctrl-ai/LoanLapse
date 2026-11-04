@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LAUND-1",
+  "boundary": "mark_conditions_cleared",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireResolutionAuthority"
+  ],
+  "variation": "V2",
+  "rationale": "C-63's recorded status is 'resolved', but the resolution was made by document_collection_bot, which is not in clearable_by. On recount the condition is still effectively open.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "resume_condition": "An authorized role (processor or underwriter) resolves C-63 with evidence.",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "The letter upload and the resolution record are each well-formed; the collection bot acted within its collection scope. The failure is the composition — a resolution by a role with no clearance authority, trusted downstream."
+}

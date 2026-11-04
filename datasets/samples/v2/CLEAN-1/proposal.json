@@ -1,0 +1,21 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "CLEAN-1",
+  "boundary": "submit_to_underwriting",
+  "proposed_at": "2026-09-05T10:00:00Z",
+  "actor": {
+    "id": "bot.processing",
+    "role": "processing_bot"
+  },
+  "package": {
+    "action": "submit_to_underwriting",
+    "readiness_ref": "R-9001",
+    "completeness": {
+      "status": "complete"
+    },
+    "documents_cited": [
+      "ID-9001",
+      "INC-9001"
+    ]
+  }
+}

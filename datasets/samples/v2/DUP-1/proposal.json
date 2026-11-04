@@ -1,0 +1,22 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "DUP-1",
+  "boundary": "submit_to_underwriting",
+  "proposed_at": "2026-09-11T10:00:00Z",
+  "actor": {
+    "id": "bot.processing",
+    "role": "processing_bot"
+  },
+  "package": {
+    "action": "submit_to_underwriting",
+    "readiness_ref": "R-3005",
+    "asset_ref": "A-3005",
+    "completeness": {
+      "status": "complete"
+    },
+    "documents_cited": [
+      "ID-3005",
+      "BS-2288"
+    ]
+  }
+}

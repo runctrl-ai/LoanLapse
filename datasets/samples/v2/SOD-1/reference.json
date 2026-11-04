@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "SOD-1",
+  "boundary": "mark_conditions_cleared",
+  "ground_truth": "DENY",
+  "contracts_fired": [
+    "requireAuthorizedActor"
+  ],
+  "variation": "V2",
+  "rationale": "The proposer role document_collection_bot is not in the allowed set for mark_conditions_cleared [conditions_bot, processor, underwriter]. No evidence fix makes this proposal valid.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "resume_condition": "An authorized actor (conditions bot, processor, or underwriter) proposes the clearance.",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "Every step the collection bot performed was within its collection scope, and the underlying resolution is valid. The failure is only the actor-boundary composition."
+}

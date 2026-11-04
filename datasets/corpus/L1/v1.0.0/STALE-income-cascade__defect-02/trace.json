@@ -1,0 +1,95 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "STALE-income-cascade__defect-02",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-02T10:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "INC-1002"
+      },
+      "note": "v1, income 3800"
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-03T09:00:00Z",
+      "node": "4_processing",
+      "agent": "loan_officer",
+      "action": "extract_income",
+      "status": "ok",
+      "produces": {
+        "computed_result": "INC-CALC-2"
+      },
+      "reads": [
+        "INC-1002"
+      ]
+    },
+    {
+      "seq": 3,
+      "at": "2026-09-03T09:20:00Z",
+      "node": "4_processing",
+      "agent": "loan_officer",
+      "action": "compute_dti",
+      "status": "ok",
+      "produces": {
+        "computed_result": "DTI-2"
+      },
+      "reads": [
+        "INC-CALC-2"
+      ]
+    },
+    {
+      "seq": 4,
+      "at": "2026-09-04T11:00:00Z",
+      "node": "4_processing",
+      "agent": "loan_officer",
+      "action": "compute_readiness",
+      "status": "ok",
+      "produces": {
+        "computed_result": "R-1002"
+      },
+      "reads": [
+        "ID-1002",
+        "INC-1002"
+      ]
+    },
+    {
+      "seq": 5,
+      "at": "2026-09-04T15:00:00Z",
+      "node": "4_processing",
+      "agent": "loan_officer",
+      "action": "request_updated_income",
+      "status": "ok",
+      "note": "exception opened; agent waiting"
+    },
+    {
+      "seq": 6,
+      "at": "2026-09-10T08:30:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "INC-1002"
+      },
+      "injection": "INJ-1",
+      "note": "v2, income 5300 while waiting"
+    },
+    {
+      "seq": 7,
+      "at": "2026-09-11T10:00:00Z",
+      "node": "5_gate_a_submit",
+      "agent": "loan_officer",
+      "action": "propose_submit",
+      "status": "ok",
+      "reads": [
+        "R-1002",
+        "DTI-2"
+      ]
+    }
+  ]
+}

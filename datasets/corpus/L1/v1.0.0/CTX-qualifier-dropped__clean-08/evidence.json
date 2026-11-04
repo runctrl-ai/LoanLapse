@@ -1,0 +1,56 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "CTX-qualifier-dropped__clean-08",
+  "documents": [
+    {
+      "id": "DISC-6184",
+      "type": "disclosure",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-02T10:00:00Z",
+      "generated_at": "2026-09-02T10:00:00Z",
+      "payload": {
+        "prior_adverse": {
+          "present": true,
+          "status": "under_dispute",
+          "doc": "pending"
+        }
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "S1",
+      "type": "summary_for_underwriting",
+      "computed_at": "2026-09-05T10:00:00Z",
+      "computed_at_seq": 2,
+      "inputs": {
+        "DISC-6184": 1
+      },
+      "derived_from": [],
+      "outcome": {
+        "prior_adverse": {
+          "present": true,
+          "status": "under_dispute"
+        }
+      }
+    },
+    {
+      "id": "S2",
+      "type": "risk_profile_summary",
+      "computed_at": "2026-09-06T10:00:00Z",
+      "computed_at_seq": 3,
+      "inputs": {},
+      "derived_from": [
+        "S1"
+      ],
+      "outcome": {
+        "prior_adverse": {
+          "present": true,
+          "status": "under_dispute"
+        }
+      }
+    }
+  ],
+  "connectors": []
+}

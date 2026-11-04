@@ -1,0 +1,12 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LAUND-2",
+  "boundary": "mark_conditions_cleared",
+  "ground_truth": "ALLOW",
+  "contracts_fired": [],
+  "variation": "V0",
+  "rationale": "C-63 was resolved by an underwriter, who is in clearable_by; the resolution is genuinely valid.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [],
+  "resume_condition": null
+}

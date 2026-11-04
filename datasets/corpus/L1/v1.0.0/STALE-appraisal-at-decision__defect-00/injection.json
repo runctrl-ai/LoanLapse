@@ -1,0 +1,23 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "STALE-appraisal-at-decision__defect-00",
+  "injections": [
+    {
+      "injection_id": "INJ-1",
+      "variation": "V2",
+      "kind": "internal",
+      "at_seq": 3,
+      "at": "2026-09-09T08:30:00Z",
+      "agent_state": {
+        "node": "6_risk",
+        "mode": "waiting",
+        "waiting_for": "revised_appraisal"
+      },
+      "resume": "resume_from_state",
+      "payload": {
+        "document": "VAL-1011",
+        "version": 2
+      }
+    }
+  ]
+}

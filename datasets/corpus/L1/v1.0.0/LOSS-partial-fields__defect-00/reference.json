@@ -1,0 +1,21 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LOSS-partial-fields__defect-00",
+  "boundary": "submit_to_underwriting",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireToolResultValidity"
+  ],
+  "variation": "V3",
+  "rationale": "The credit check returned status ok but the score field is null; the workflow treats the partial result as complete.",
+  "label_provenance": "rule",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "all_local_steps_pass": true,
+  "detection_class": "single_point_recount",
+  "no_single_culprit": false,
+  "single_point_note": "All steps pass locally, but the package's claim (completeness / presence / tool-result validity) is false on a recount from raw evidence at the boundary; the fault is localizable to the claim yet invisible unless the guarded quantity is recomputed from raw, not read from the claim.",
+  "recount_justification": "The call reported success and no step errored; a required field is simply missing from the 'successful' result."
+}

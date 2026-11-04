@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "UNK-2",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-UNK"
+  ],
+  "issue_id": "UNK-clean",
+  "variation": "V0",
+  "gate": "A",
+  "group_id": "UNK-2",
+  "split": "dev",
+  "notes": "Clean twin of UNK-1: the credit-report connector returns ok with no adverse findings."
+}

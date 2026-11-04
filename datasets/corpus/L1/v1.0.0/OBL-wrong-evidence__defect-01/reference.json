@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "OBL-wrong-evidence__defect-01",
+  "boundary": "submit_to_underwriting",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireNoOpenConditions"
+  ],
+  "variation": "V2",
+  "rationale": "The condition requires an explanation letter, but its resolution references a paystub; on recount the required evidence is absent, so the condition is not genuinely cleared.",
+  "label_provenance": "rule",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "all_local_steps_pass": true,
+  "detection_class": "compositional",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "Each step is well-formed; the mismatch between required and attached evidence is only visible on recount."
+}

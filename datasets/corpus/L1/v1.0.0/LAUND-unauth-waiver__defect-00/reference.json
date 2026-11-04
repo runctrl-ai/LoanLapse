@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LAUND-unauth-waiver__defect-00",
+  "boundary": "render_decision",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireResolutionAuthority"
+  ],
+  "variation": "V2",
+  "rationale": "The condition is waived, but the waiver was recorded by a processor while only an underwriter may waive it; the decision accepts it.",
+  "label_provenance": "rule",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "all_local_steps_pass": true,
+  "detection_class": "compositional",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "The waiver record and the decision are well-formed; only the waiver's authority is invalid."
+}

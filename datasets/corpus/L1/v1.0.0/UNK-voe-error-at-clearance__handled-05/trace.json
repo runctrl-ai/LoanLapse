@@ -1,0 +1,64 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "UNK-voe-error-at-clearance__handled-05",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-02T10:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "INC-3093"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-03T10:00:00Z",
+      "node": "4_processing",
+      "agent": "loan_officer",
+      "action": "compute_readiness",
+      "status": "ok",
+      "produces": {
+        "computed_result": "R-3093"
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-09-11T11:55:00Z",
+      "node": "4_processing",
+      "agent": "loan_officer",
+      "action": "call_credit_report",
+      "status": "timeout",
+      "produces": {
+        "connector_call": "credit_report"
+      },
+      "injection": "INJ-1",
+      "note": "transient timeout"
+    },
+    {
+      "seq": 4,
+      "at": "2026-09-11T12:05:00Z",
+      "node": "4_processing",
+      "agent": "loan_officer",
+      "action": "retry_credit_report",
+      "status": "ok",
+      "produces": {
+        "connector_call": "credit_report"
+      },
+      "note": "retry succeeded"
+    },
+    {
+      "seq": 5,
+      "at": "2026-09-11T12:10:00Z",
+      "node": "5_gate_a_submit",
+      "agent": "loan_officer",
+      "action": "propose_submit",
+      "status": "ok",
+      "reads": [
+        "R-3093"
+      ]
+    }
+  ]
+}

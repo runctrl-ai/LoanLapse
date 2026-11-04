@@ -1,0 +1,35 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "SOD-sop-routes-to-bot__defect-00",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-08T10:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "LTR-8264"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-08T14:00:00Z",
+      "node": "7_conditions",
+      "agent": "processor",
+      "action": "resolve_condition",
+      "status": "ok",
+      "note": "condition validly resolved by processor"
+    },
+    {
+      "seq": 3,
+      "at": "2026-09-09T10:00:00Z",
+      "node": "8_gate_b_clear",
+      "agent": "document_collection_bot",
+      "action": "propose_clear_condition",
+      "status": "ok",
+      "note": "the SOP assigns clearance to the collection bot (no injection) - a role without authority"
+    }
+  ]
+}

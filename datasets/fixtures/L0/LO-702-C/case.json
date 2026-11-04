@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-702-C",
+  "workflow": "W2",
+  "boundary": "mark_conditions_cleared",
+  "family_ids": [
+    "F-UNK"
+  ],
+  "group_id": "G-702",
+  "contrast_role": "clean_twin",
+  "split": "dev",
+  "revision": 1,
+  "loan_keys": {
+    "loan_id": "LN-6011",
+    "borrower_id": "BRW-722"
+  },
+  "notes": "Clean twin of LO-702: the verification connector succeeded.",
+  "variation": "V0",
+  "issue_id": "UNK-clean"
+}

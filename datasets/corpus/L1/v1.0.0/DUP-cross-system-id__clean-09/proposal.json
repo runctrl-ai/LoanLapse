@@ -1,0 +1,21 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "DUP-cross-system-id__clean-09",
+  "boundary": "submit_to_underwriting",
+  "proposed_at": "2026-09-10T12:00:00Z",
+  "actor": {
+    "id": "user.lo1",
+    "role": "loan_officer"
+  },
+  "package": {
+    "action": "submit_to_underwriting",
+    "completeness": {
+      "status": "complete"
+    },
+    "documents_cited": [
+      "ID-4130",
+      "BS-4230"
+    ],
+    "readiness_ref": "R-4130"
+  }
+}

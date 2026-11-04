@@ -1,0 +1,21 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "CTX-caveat-to-closing__defect-01",
+  "boundary": "render_decision",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireSourceConsistency"
+  ],
+  "variation": "V1",
+  "rationale": "A conditional-approval caveat is dropped in the handoff toward closing; the decision proceeds as if unconditional.",
+  "label_provenance": "rule",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "all_local_steps_pass": true,
+  "detection_class": "compositional",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "Each handoff is faithful to its input; the caveat is lost across the chain, not by any single error.",
+  "dropped_field": "caveat"
+}

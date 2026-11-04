@@ -1,0 +1,17 @@
+{
+  "title": "LoanLapse: A Synthetic Dataset of Control Failures in Agentic Loan-Underwriting Workflows",
+  "upload_type": "dataset",
+  "description": "308 fully synthetic, deterministically generated cases of control failures in an agentic loan-underwriting workflow. Each case carries a rule-based ground-truth control decision (ALLOW / HOLD / DENY) on the action at a workflow gate, so detection methods can be scored against one consistent ground truth. No real data; no model is a label source.",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "creators": [
+    { "name": "Kundeti, Pavan Kumar", "affiliation": "RunCtrl" },
+    { "name": "Grandhi, Sri Sai Charith", "affiliation": "RunCtrl" },
+    { "name": "Gupta, Rajesh", "affiliation": "RunCtrl" },
+    { "name": "Kumar, Sumit", "affiliation": "RunCtrl" }
+  ],
+  "keywords": [
+    "agentic AI", "guardrails", "control", "synthetic data", "loan underwriting",
+    "compositional policy violations", "LLM agents", "benchmark"
+  ]
+}

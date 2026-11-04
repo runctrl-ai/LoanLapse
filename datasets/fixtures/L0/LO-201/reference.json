@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-201",
+  "boundary": "submit_to_underwriting",
+  "reference_kind": "HOLD",
+  "reference_contracts": [
+    "requireCurrentEvidence"
+  ],
+  "rationale": "Current income version is 2; the cited readiness R-1042-a recorded income version 1. The submission relies on a result computed before the newer evidence arrived.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "resume_condition": "Recompute readiness from income v2 and re-propose citing the new result.",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "Each step was correct when it ran: readiness was computed correctly from the then-current income, the v2 upload was a legitimate world event, and the submission proposal is well-formed. Only the composition - citing a result that predates newer required evidence - is wrong.",
+  "post_remediation_kind": "ALLOW"
+}

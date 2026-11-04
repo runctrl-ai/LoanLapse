@@ -1,0 +1,21 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "CTX-qualifier-dropped__defect-00",
+  "boundary": "render_decision",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireSourceConsistency"
+  ],
+  "variation": "V1",
+  "rationale": "The 'under_dispute' qualifier present in the source is absent from S2, which the decision reads; re-derived from source it changes the call.",
+  "label_provenance": "rule",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "all_local_steps_pass": true,
+  "detection_class": "compositional",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "Each summary is individually faithful; the qualifier accumulates out of the file across the chain.",
+  "dropped_at_seq": 3
+}

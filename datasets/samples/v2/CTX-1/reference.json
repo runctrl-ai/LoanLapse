@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "CTX-1",
+  "boundary": "render_decision",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireSourceConsistency"
+  ],
+  "variation": "V1",
+  "rationale": "The material qualifier 'under_dispute' is present in the source disclosure but absent from S2, which the decision reads. Re-derived from the retained source, the qualifier changes the correct call.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "resume_condition": "Re-derive the decision facts from the source disclosure (restore the qualifier).",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "Each summary is individually faithful to its input; no step fabricated anything. The failure is only across the chain — the qualifier accumulated out of the file by the decision.",
+  "dropped_at_seq": 3
+}

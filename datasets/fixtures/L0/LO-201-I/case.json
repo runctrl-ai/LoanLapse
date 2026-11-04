@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-201-I",
+  "workflow": "W1",
+  "boundary": "submit_to_underwriting",
+  "family_ids": [
+    "F-STALE"
+  ],
+  "group_id": "G-201",
+  "contrast_role": "irrelevant_twin",
+  "split": "dev",
+  "revision": 1,
+  "loan_keys": {
+    "loan_id": "LN-1042",
+    "borrower_id": "BRW-204"
+  },
+  "notes": "Irrelevant-change twin of LO-201: a contact-preference update arrived after readiness was computed. Contact preference is not required-current evidence and is not an input to the cited result, so the decision must stay ALLOW.",
+  "variation": "V0",
+  "issue_id": "STALE-irrelevant"
+}

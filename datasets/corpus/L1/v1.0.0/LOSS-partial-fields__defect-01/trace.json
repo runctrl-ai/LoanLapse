@@ -1,0 +1,56 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LOSS-partial-fields__defect-01",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-01T10:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "ID-7221"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-03T09:00:00Z",
+      "node": "4_processing",
+      "agent": "loan_officer",
+      "action": "call_credit_report",
+      "status": "ok",
+      "produces": {
+        "connector_call": "credit_report"
+      },
+      "injection": "INJ-1",
+      "note": "status ok but score is null"
+    },
+    {
+      "seq": 3,
+      "at": "2026-09-03T10:00:00Z",
+      "node": "4_processing",
+      "agent": "loan_officer",
+      "action": "compute_readiness",
+      "status": "ok",
+      "produces": {
+        "computed_result": "R-7221"
+      },
+      "reads": [
+        "credit_report"
+      ]
+    },
+    {
+      "seq": 4,
+      "at": "2026-09-04T10:00:00Z",
+      "node": "5_gate_a_submit",
+      "agent": "loan_officer",
+      "action": "propose_submit",
+      "status": "ok",
+      "reads": [
+        "R-7221"
+      ],
+      "note": "treats partial result as complete"
+    }
+  ]
+}

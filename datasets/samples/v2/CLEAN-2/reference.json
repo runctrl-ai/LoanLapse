@@ -1,0 +1,11 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "CLEAN-2",
+  "boundary": "render_decision",
+  "ground_truth": "ALLOW",
+  "contracts_fired": [],
+  "variation": "V0",
+  "rationale": "Clean file; the underwriter's decline is sound (current, complete evidence). In control space a sound decision may proceed, so RunCtrl allows the action. RunCtrl does not judge the credit merits.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": []
+}

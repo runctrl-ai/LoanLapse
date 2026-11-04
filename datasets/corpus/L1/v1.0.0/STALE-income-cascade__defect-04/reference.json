@@ -1,0 +1,25 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "STALE-income-cascade__defect-04",
+  "boundary": "submit_to_underwriting",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireCurrentEvidence"
+  ],
+  "variation": "V2",
+  "rationale": "Current income is v2; readiness/DTI/income-figure all trace to income v1 -> stale chain.",
+  "label_provenance": "rule",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "all_local_steps_pass": true,
+  "detection_class": "compositional",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "Each step correct when it ran; the v2 upload was legitimate; only the composition is wrong.",
+  "stale_chain": [
+    "INC-CALC-4",
+    "DTI-4",
+    "R-1004"
+  ]
+}

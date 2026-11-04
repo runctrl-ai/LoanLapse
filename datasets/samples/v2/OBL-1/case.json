@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "OBL-1",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-OBL"
+  ],
+  "issue_id": "OBL-deposit",
+  "variation": "V1",
+  "gate": "A",
+  "group_id": "OBL-1",
+  "split": "dev",
+  "notes": "No injection. Review opens a condition; the handoff summary omits it; the file is submitted as ready while the condition is still open."
+}

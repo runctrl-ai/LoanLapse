@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "OBL-deposit-omitted__clean-09",
+  "boundary": "submit_to_underwriting",
+  "proposed_at": "2026-09-08T11:00:00Z",
+  "actor": {
+    "id": "user.lo1",
+    "role": "loan_officer"
+  },
+  "package": {
+    "action": "submit_to_underwriting",
+    "completeness": {
+      "status": "complete"
+    },
+    "documents_cited": [
+      "INC-5141"
+    ],
+    "readiness_ref": "R-5141"
+  }
+}

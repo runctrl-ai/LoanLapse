@@ -1,0 +1,209 @@
+# SYNTHETIC — NOT REAL LENDING RULES.
+# Every rule in this file is invented for the runctrl-sim study. Lending vocabulary
+# (URLA, VOE, conditions, credit report) is used for shape only. Nothing here may be
+# read as guidance for actual loan origination, and RunCtrl never makes a credit
+# decision: these contracts only govern whether a file may MOVE.
+#
+# A contract states: what is checked (which check implements it), where it binds
+# (workflow + boundary), what decision fires on failure, and what lets the workflow
+# resume. must_know: true means a failing or UNKNOWN outcome cannot be ignored at the
+# boundary; UNKNOWN on a must_know check gives HOLD (fail closed, hard rule 3).
+#
+# One contract per v1 failure family (9). check names match taxonomy/families.yaml and
+# the dataset doc. Every contract a case cites (reference.json contracts_fired) is defined
+# here, and every boundary a label fires at is declared below.
+
+version: "1.0"
+check_library_version: "1.0"
+
+# The three control gates, and which workflow phase they belong to. request_document is
+# listed as an explicit non-boundary: no contracts bind there, so proposals at it are
+# allowed without evaluation (decisions.md D-007).
+#   Gate A = submit_to_underwriting   Gate B = mark_conditions_cleared   Gate C = render_decision
+boundaries:
+  submit_to_underwriting:
+    gate: A
+    workflow: W1
+    kind: consequential
+  mark_conditions_cleared:
+    gate: B
+    workflow: W2
+    kind: consequential
+  render_decision:
+    gate: C
+    workflow: W2
+    kind: consequential
+  request_document:
+    workflow: W1
+    kind: non_consequential
+
+# Proposer roles allowed at each boundary (decisions.md D-008, D-032). A proposal whose
+# actor role is not listed here is a wrong-actor violation -> DENY. Resolver authority for a
+# condition comes from the condition's own clearable_by list, not from this table.
+boundary_roles:
+  submit_to_underwriting: [loan_officer, processor]
+  mark_conditions_cleared: [conditions_bot, processor, underwriter]
+  render_decision: [underwriter]
+
+# Policy parameters the checks recount against raw evidence.
+parameters:
+  # Evidence types that must be present and current for a package at each boundary.
+  required_current_evidence:
+    submit_to_underwriting: [identity, income]
+    mark_conditions_cleared: [voe]
+    render_decision: [appraisal]
+  # Connectors whose result is must-know at each boundary.
+  must_know_connectors:
+    submit_to_underwriting: [credit_report]
+    mark_conditions_cleared: [voe_verification]
+  # Income coverage rule for completeness (decisions.md D-010): income evidence must cover
+  # the two most recent full calendar months before the proposal timestamp.
+  income_required_months: 2
+
+contracts:
+  # --- business level: single-point evidence validity ---
+  - id: requireCompleteEvidence            # family F-COMP (evidence completeness)
+    version: "1.0"
+    binds:
+      - boundary: submit_to_underwriting
+    check: completeness_recount
+    must_know: true
+    on_fail: HOLD
+    statement: >
+      A package claiming completeness must survive a recount of raw evidence against (a) the
+      income coverage window (income_required_months), and (b) every pending_evidence
+      obligation recorded on the case (a required document type not yet supplied, or a coverage
+      window such as VOE months not yet met). If any recorded requirement is unmet by the raw
+      evidence, the completeness claim fails. The claim is never accepted from the summary or
+      package alone.
+    resume_condition: >
+      Collect the missing evidence, satisfy the pending_evidence obligation, and re-propose.
+
+  - id: requireEvidencePresent             # family F-UNK (unknown / missing evidence)
+    version: "1.0"
+    binds:
+      - boundary: submit_to_underwriting
+      - boundary: mark_conditions_cleared
+    check: evidence_presence
+    must_know: true
+    on_fail: HOLD
+    statement: >
+      Every must-know connector for the boundary must have status ok at decision time.
+      A timeout, error, or missing fetch is UNKNOWN, and UNKNOWN at a consequential
+      boundary is HOLD (fail closed). An empty or failed fetch is never proof that no
+      adverse evidence exists.
+    resume_condition: >
+      The connector fetch succeeds (or the evidence is supplied out of band as a new
+      evidence version) and the proposal is re-evaluated.
+
+  - id: requireSingleSourceOfTruth         # family F-DUP (duplicate / dual-source)
+    version: "1.0"
+    binds:
+      - boundary: submit_to_underwriting
+    check: single_source_of_truth
+    must_know: true
+    on_fail: HOLD
+    statement: >
+      When two evidence documents resolve to the same real-world artifact (same account and
+      statement period, or same EIN and tax year, via different channels), the package must
+      rely on the copy with the latest generation date; citing a superseded duplicate fails.
+    resume_condition: >
+      Recompute any dependent results from the surviving copy and re-propose citing it.
+
+  # --- business level: cross-state validity (cross-step) ---
+  - id: requireCurrentEvidence             # family F-STALE (stale evidence)
+    version: "1.0"
+    binds:
+      - boundary: submit_to_underwriting
+      - boundary: render_decision
+    check: evidence_currency
+    must_know: true
+    on_fail: HOLD
+    statement: >
+      Every computed result the package cites must have used the current version of each
+      required-current evidence input. Current version is recomputed as the maximum version
+      of that evidence id in the raw evidence record, never read from a stored field.
+    resume_condition: >
+      Recompute the cited result from current evidence versions and re-propose.
+
+  # --- business level: obligations & thresholds ---
+  - id: requireNoOpenConditions            # family F-OBL (forgotten obligation)
+    version: "1.0"
+    binds:
+      - boundary: submit_to_underwriting
+      - boundary: render_decision
+    check: active_obligations
+    must_know: true
+    on_fail: HOLD
+    statement: >
+      No obligation of kind condition with this boundary in enforce_at may be open.
+      A condition counts as open unless it carries a resolution by a role in its own
+      clearable_by list with an evidence reference that actually satisfies it; a recorded
+      status field is not trusted.
+    resume_condition: >
+      Resolve each open condition via an authorized role with satisfying evidence, then
+      re-propose.
+
+  # --- agentic behaviour: context integrity ---
+  - id: requireSourceConsistency           # family F-CTX (context collapse)
+    version: "1.0"
+    binds:
+      - boundary: render_decision
+    check: source_vs_summary
+    must_know: true
+    on_fail: HOLD
+    statement: >
+      A decision-relevant fact re-derived from the retained source must match what the
+      decision reads from the summary chain. If a qualifier or field present in the source
+      is absent from the summary the decision uses, the summary is not trusted.
+    resume_condition: >
+      Re-derive the decision-relevant facts from the source and re-propose on the corrected
+      summary.
+
+  - id: requireToolResultValidity          # family F-LOSS (context loss)
+    version: "1.0"
+    binds:
+      - boundary: submit_to_underwriting
+      - boundary: render_decision
+    check: tool_result_validity
+    must_know: true
+    on_fail: HOLD
+    statement: >
+      A tool/connector result marked success must carry a populated, current payload before
+      it is used as evidence. An empty body, a null required field, or a stale cached record
+      returned under a success status is treated as UNKNOWN, not as a clear result.
+    resume_condition: >
+      Re-fetch the tool result until it returns a populated current payload, then re-propose.
+
+  # --- agentic behaviour: authority integrity ---
+  - id: requireAuthorizedActor             # family F-SOD (segregation of duties)
+    version: "1.0"
+    binds:
+      - boundary: submit_to_underwriting
+      - boundary: mark_conditions_cleared
+      - boundary: render_decision
+    check: actor_permission
+    must_know: true
+    on_fail: DENY
+    statement: >
+      The proposal actor's role must be in the allowed proposer set for the boundary
+      (boundary_roles). A wrong-actor proposal is denied, not held: no evidence fix makes
+      this proposal valid (decisions.md D-003).
+    resume_condition: >
+      An authorized actor submits a fresh proposal for the same action.
+
+  - id: requireResolutionAuthority         # family F-LAUND (authority laundering)
+    version: "1.0"
+    binds:
+      - boundary: mark_conditions_cleared
+      - boundary: render_decision
+    check: resolution_authority
+    must_know: true
+    on_fail: HOLD
+    statement: >
+      A condition's recorded resolution (clear, waiver, or exception approval) is trusted
+      downstream only if the actor who recorded it held the authority required for that
+      action (the condition's clearable_by list, or the stated authority level). Otherwise
+      the condition is still open on recount.
+    resume_condition: >
+      Re-resolve the condition through an actor with the required authority, then re-propose.

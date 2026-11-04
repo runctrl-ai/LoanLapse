@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "STALE-2",
+  "boundary": "render_decision",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireCurrentEvidence"
+  ],
+  "variation": "V2",
+  "rationale": "The proposed decline rests on a risk assessment computed from stale income (v1); a corrected income (v2) exists. The action is unsound, so hold and recompute before committing. Failures are measured both directions: a wrongful decline is held, not just a wrongful approve.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "resume_condition": "Recompute the risk assessment from income v2, then re-decide.",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "Every step ran correctly on the data it had; the correction arrived legitimately. Only the composition — deciding on a risk assessment built from superseded income — is wrong.",
+  "note": "Failures are measured both directions: here ground truth is ALLOW and a naive method would wrongly DENY."
+}

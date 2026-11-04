@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-202",
+  "boundary": "mark_conditions_cleared",
+  "reference_kind": "HOLD",
+  "reference_contracts": [
+    "requireCurrentEvidence"
+  ],
+  "rationale": "The resolution of C-44 cites VOE version 1; version 2 is current and materially different. Clearance would rely on superseded evidence.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "resume_condition": "Re-verify against VOE v2 and resolve the condition on current evidence.",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "The resolution was valid when recorded; the v2 upload was a legitimate world event; the clearance proposal is well-formed. Only the composition - clearing on a resolution that predates newer required evidence - is wrong."
+}

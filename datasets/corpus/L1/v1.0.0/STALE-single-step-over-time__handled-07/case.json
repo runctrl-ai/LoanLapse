@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "STALE-single-step-over-time__handled-07",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-STALE"
+  ],
+  "issue_id": "STALE-single-step-over-time",
+  "variation": "V2",
+  "gate": "A",
+  "group_id": "STALE-single-step-over-time",
+  "split": "unassigned",
+  "loan_keys": {
+    "loan_id": "LN-7029",
+    "borrower_id": "BRW-629"
+  }
+}

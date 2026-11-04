@@ -1,0 +1,10 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "SOD-sop-routes-to-bot__handled-07",
+  "boundary": "mark_conditions_cleared",
+  "ground_truth": "ALLOW",
+  "contracts_fired": [],
+  "variation": "V2",
+  "rationale": "The proposer role was set (V2) but to an authorized role (processor); the condition has a valid resolution -> allow.",
+  "label_provenance": "rule"
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "DEP-2",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-DEP"
+  ],
+  "issue_id": "DEP-clean",
+  "variation": "V0",
+  "gate": "C",
+  "group_id": "DEP-2",
+  "split": "dev",
+  "notes": "Clean twin of DEP-1: no override or version change after the risk assessment; the decision cites a current result."
+}

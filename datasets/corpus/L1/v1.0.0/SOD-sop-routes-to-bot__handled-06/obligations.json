@@ -1,0 +1,31 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "SOD-sop-routes-to-bot__handled-06",
+  "obligations": [
+    {
+      "id": "C-270",
+      "kind": "condition",
+      "type": "large_deposit_explanation",
+      "enforce_at": [
+        "mark_conditions_cleared"
+      ],
+      "clearable_by": [
+        "processor",
+        "underwriter"
+      ],
+      "status_recorded": "resolved",
+      "resolution": {
+        "by": {
+          "id": "user.proc1",
+          "role": "processor"
+        },
+        "evidence_ref": {
+          "doc_id": "LTR-8270",
+          "version": 1
+        },
+        "at": "2026-09-08T14:00:00Z"
+      },
+      "payload": {}
+    }
+  ]
+}

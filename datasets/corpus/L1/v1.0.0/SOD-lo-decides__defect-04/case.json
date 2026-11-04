@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "SOD-lo-decides__defect-04",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-SOD"
+  ],
+  "issue_id": "SOD-lo-decides",
+  "variation": "V2",
+  "gate": "C",
+  "group_id": "SOD-lo-decides",
+  "split": "unassigned",
+  "loan_keys": {
+    "loan_id": "LN-7246",
+    "borrower_id": "BRW-846"
+  }
+}

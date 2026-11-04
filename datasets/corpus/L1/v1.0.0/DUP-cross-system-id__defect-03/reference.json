@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "DUP-cross-system-id__defect-03",
+  "boundary": "submit_to_underwriting",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireSingleSourceOfTruth"
+  ],
+  "variation": "V2",
+  "rationale": "The same W-2 (same EIN and tax year) entered via two systems under two ids; the cited copy is the older generation.",
+  "label_provenance": "rule",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "all_local_steps_pass": true,
+  "detection_class": "compositional",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "Each system ingested a valid document; only comparing across systems reveals the duplicate."
+}

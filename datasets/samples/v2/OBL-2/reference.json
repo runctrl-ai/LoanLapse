@@ -1,0 +1,12 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "OBL-2",
+  "boundary": "submit_to_underwriting",
+  "ground_truth": "ALLOW",
+  "contracts_fired": [],
+  "variation": "V0",
+  "rationale": "C-17 carries a valid resolution by a processor (in clearable_by) with an evidence reference; no open conditions remain.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [],
+  "resume_condition": null
+}

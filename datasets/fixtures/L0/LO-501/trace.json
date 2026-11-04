@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-501",
+  "steps": [
+    {
+      "id": "intake_conditions",
+      "status": "ok",
+      "actor": "bot.conditions",
+      "at": "2026-09-04T10:00:00Z"
+    },
+    {
+      "id": "collect_condition_evidence",
+      "status": "ok",
+      "actor": "bot.doc_collect",
+      "at": "2026-09-08T10:00:00Z"
+    },
+    {
+      "id": "verify_resolution",
+      "status": "ok",
+      "actor": "bot.conditions",
+      "at": "2026-09-08T10:00:00Z"
+    },
+    {
+      "id": "clearance_summary",
+      "status": "ok",
+      "actor": "bot.conditions",
+      "at": "2026-09-09T10:00:00Z",
+      "summary": "Condition C-52 resolved; clearance prepared."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-702",
+  "obligations": [
+    {
+      "id": "C-63",
+      "kind": "condition",
+      "type": "employment_verification",
+      "status_recorded": "resolved",
+      "opened_at": "2026-09-05T10:00:00Z",
+      "opened_by": {
+        "step": "underwriting_review",
+        "role": "underwriting_system"
+      },
+      "enforce_at": [
+        "mark_conditions_cleared"
+      ],
+      "clearable_by": [
+        "processor",
+        "underwriter"
+      ],
+      "description": "Re-verify employment before clearance.",
+      "payload": {},
+      "resolution": {
+        "by": {
+          "id": "user.proc1",
+          "role": "processor"
+        },
+        "evidence_ref": {
+          "document_id": "VOE-6011",
+          "version": 1
+        },
+        "at": "2026-09-10T14:00:00Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "STALE-income-cascade__defect-01",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-STALE"
+  ],
+  "issue_id": "STALE-income-cascade",
+  "variation": "V2",
+  "gate": "A",
+  "group_id": "STALE-income-cascade",
+  "split": "unassigned",
+  "loan_keys": {
+    "loan_id": "LN-7001",
+    "borrower_id": "BRW-601"
+  }
+}

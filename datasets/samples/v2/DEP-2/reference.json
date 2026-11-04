@@ -1,0 +1,12 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "DEP-2",
+  "boundary": "render_decision",
+  "ground_truth": "ALLOW",
+  "contracts_fired": [],
+  "variation": "V0",
+  "rationale": "No value was overridden and no version changed after the risk assessment; the decision rests on a current result. Nothing to hold.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [],
+  "resume_condition": null
+}

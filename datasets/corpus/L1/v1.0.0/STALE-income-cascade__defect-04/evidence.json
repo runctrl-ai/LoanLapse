@@ -1,0 +1,100 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "STALE-income-cascade__defect-04",
+  "documents": [
+    {
+      "id": "ID-1004",
+      "type": "identity",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-01T10:00:00Z",
+      "generated_at": "2026-09-01T10:00:00Z",
+      "payload": {
+        "name": "E. Haddad"
+      }
+    },
+    {
+      "id": "INC-1004",
+      "type": "income",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-02T10:00:00Z",
+      "generated_at": "2026-09-02T10:00:00Z",
+      "payload": {
+        "periods": [
+          "2026-07",
+          "2026-08"
+        ],
+        "monthly": 4000
+      }
+    },
+    {
+      "id": "INC-1004",
+      "type": "income",
+      "version": 2,
+      "channel": "portal",
+      "received_at": "2026-09-10T10:00:00Z",
+      "generated_at": "2026-09-10T10:00:00Z",
+      "payload": {
+        "periods": [
+          "2026-07",
+          "2026-08"
+        ],
+        "monthly": 5600,
+        "note": "updated paystub"
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "INC-CALC-4",
+      "type": "income_figure",
+      "computed_at": "2026-09-03T10:00:00Z",
+      "computed_at_seq": 2,
+      "inputs": {
+        "INC-1004": 1
+      },
+      "derived_from": [],
+      "outcome": {
+        "monthly": 4000
+      }
+    },
+    {
+      "id": "DTI-4",
+      "type": "dti",
+      "computed_at": "2026-09-03T10:00:00Z",
+      "computed_at_seq": 3,
+      "inputs": {},
+      "derived_from": [
+        "INC-CALC-4"
+      ],
+      "outcome": {
+        "dti": 0.44
+      }
+    },
+    {
+      "id": "R-1004",
+      "type": "readiness",
+      "computed_at": "2026-09-04T10:00:00Z",
+      "computed_at_seq": 4,
+      "inputs": {
+        "ID-1004": 1,
+        "INC-1004": 1
+      },
+      "derived_from": [
+        "DTI-4"
+      ],
+      "outcome": "ready"
+    }
+  ],
+  "connectors": [
+    {
+      "name": "credit_report",
+      "status": "ok",
+      "attempted_at": "2026-09-04T12:00:00Z",
+      "result": {
+        "adverse_findings": []
+      }
+    }
+  ]
+}

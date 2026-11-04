@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "COMP-1",
+  "boundary": "submit_to_underwriting",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireCompleteEvidence"
+  ],
+  "variation": "V1",
+  "rationale": "Proposed 2026-09-07 requires the two most recent months {2026-07, 2026-08}; income covers only 2026-07. The package claims complete while a recount finds August missing.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "resume_condition": "Collect the August income document, satisfy the pending-evidence obligation, and re-propose.",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "Collection recorded the missing period; extraction was accurate for the document present; every step reported success. The gap is only visible on a recount of raw evidence."
+}

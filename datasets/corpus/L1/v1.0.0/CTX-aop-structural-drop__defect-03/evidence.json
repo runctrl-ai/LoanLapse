@@ -1,0 +1,35 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "CTX-aop-structural-drop__defect-03",
+  "documents": [
+    {
+      "id": "EST-6168",
+      "type": "cost_estimate",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-02T10:00:00Z",
+      "generated_at": "2026-09-02T10:00:00Z",
+      "payload": {
+        "equipment_cost": 96800,
+        "installation_cost_extra": true,
+        "installation_note": "installation billed separately"
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "S1",
+      "type": "cost_summary",
+      "computed_at": "2026-09-05T10:00:00Z",
+      "computed_at_seq": 2,
+      "inputs": {
+        "EST-6168": 1
+      },
+      "derived_from": [],
+      "outcome": {
+        "equipment_cost": 96800
+      }
+    }
+  ],
+  "connectors": []
+}

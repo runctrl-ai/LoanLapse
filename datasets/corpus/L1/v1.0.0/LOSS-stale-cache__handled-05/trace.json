@@ -1,0 +1,67 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LOSS-stale-cache__handled-05",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-01T10:00:00Z",
+      "node": "3_intake",
+      "agent": "borrower",
+      "action": "upload_document",
+      "status": "ok",
+      "produces": {
+        "document": "ID-7214"
+      }
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-06T09:00:00Z",
+      "node": "6_risk",
+      "agent": "underwriter",
+      "action": "call_kyb_registry",
+      "status": "ok",
+      "produces": {
+        "connector_call": "kyb_registry"
+      },
+      "injection": "INJ-1",
+      "note": "empty body"
+    },
+    {
+      "seq": 3,
+      "at": "2026-09-06T09:10:00Z",
+      "node": "6_risk",
+      "agent": "underwriter",
+      "action": "refetch_kyb_registry",
+      "status": "ok",
+      "produces": {
+        "connector_call": "kyb_registry"
+      },
+      "note": "re-fetch returns populated result"
+    },
+    {
+      "seq": 4,
+      "at": "2026-09-06T09:20:00Z",
+      "node": "6_risk",
+      "agent": "underwriter",
+      "action": "save_risk_assessment",
+      "status": "ok",
+      "produces": {
+        "computed_result": "RA-214"
+      },
+      "reads": [
+        "kyb_registry"
+      ]
+    },
+    {
+      "seq": 5,
+      "at": "2026-09-07T10:00:00Z",
+      "node": "9_gate_c_decide",
+      "agent": "underwriter",
+      "action": "propose_decision",
+      "status": "ok",
+      "reads": [
+        "RA-214"
+      ]
+    }
+  ]
+}

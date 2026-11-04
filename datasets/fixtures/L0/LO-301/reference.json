@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-301",
+  "boundary": "submit_to_underwriting",
+  "reference_kind": "HOLD",
+  "reference_contracts": [
+    "requireNoOpenConditions"
+  ],
+  "rationale": "Condition C-17 is open and enforced at submission; the package proposes to move the file forward anyway.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "resume_condition": "Resolve C-17 via an authorized role with the explanation letter attached, then re-propose.",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "Review correctly opened the condition; the handoff summary's claim about collected documents is locally true; the proposal is well-formed. The violation exists only in the composition: the open condition was dropped from the handoff view.",
+  "post_remediation_kind": "ALLOW"
+}

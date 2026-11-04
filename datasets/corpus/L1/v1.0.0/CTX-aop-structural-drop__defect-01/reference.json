@@ -1,0 +1,21 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "CTX-aop-structural-drop__defect-01",
+  "boundary": "render_decision",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireSourceConsistency"
+  ],
+  "variation": "V1",
+  "rationale": "The cost summary structurally forwards only equipment_cost; the source's separate installation cost never reaches the decision, understating total cost.",
+  "label_provenance": "rule",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "all_local_steps_pass": true,
+  "detection_class": "compositional",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "No step erred; the SOP's summariser is defined to pass only equipment cost, so the omission is structural, not a mistake.",
+  "dropped_field": "installation_cost_extra"
+}

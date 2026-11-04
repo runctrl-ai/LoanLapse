@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-301-X",
+  "boundary": "submit_to_underwriting",
+  "reference_kind": "HOLD",
+  "reference_contracts": [
+    "requireNoOpenConditions"
+  ],
+  "rationale": "C-17's recorded status is resolved, but the resolution was made by a role outside the condition's clearable_by list, so on recount the condition is still open.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "resume_condition": "An authorized role (processor or underwriter) resolves C-17 with evidence attached.",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "The letter upload and the resolution record are each well-formed; the collection bot acted within its collection scope. The violation is in the composition of role and action: the resolution exists but was made by a role with no clearance authority."
+}

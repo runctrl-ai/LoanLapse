@@ -1,0 +1,22 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "DUP-corrected-paystub__defect-01",
+  "injections": [
+    {
+      "injection_id": "INJ-1",
+      "variation": "V2",
+      "kind": "internal",
+      "at_seq": 3,
+      "at": "2026-09-08T10:00:00Z",
+      "agent_state": {
+        "node": "4_processing",
+        "mode": "running"
+      },
+      "resume": "resume_from_state",
+      "payload": {
+        "document": "INC-4511",
+        "version": 2
+      }
+    }
+  ]
+}

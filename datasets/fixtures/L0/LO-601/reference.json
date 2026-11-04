@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-601",
+  "boundary": "submit_to_underwriting",
+  "reference_kind": "HOLD",
+  "reference_contracts": [
+    "requireCompleteEvidence"
+  ],
+  "rationale": "The package claims completeness, but a recount of raw income evidence against the policy's coverage parameter (two most recent full months before the proposal date) shows 2026-08 missing; the pending-evidence obligation for that period is still active.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "resume_condition": "Receive the August income document, satisfy the pending-evidence obligation, and re-propose.",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "Collection correctly recorded the missing period as an obligation; extraction was accurate for the document present; every step reported success. The violation is only visible when the completeness claim is recounted against raw evidence and the active obligation - no single step's own view contains it."
+}

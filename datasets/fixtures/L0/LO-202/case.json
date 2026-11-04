@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-202",
+  "workflow": "W2",
+  "boundary": "mark_conditions_cleared",
+  "family_ids": [
+    "F-STALE"
+  ],
+  "group_id": "G-202",
+  "contrast_role": "violation",
+  "split": "dev",
+  "revision": 1,
+  "loan_keys": {
+    "loan_id": "LN-1077",
+    "borrower_id": "BRW-233"
+  },
+  "notes": "F09 at the W2 boundary: the condition was validly resolved citing VOE v1, then VOE v2 arrived (employer status changed); clearance still relies on the v1 resolution.",
+  "variation": "V2",
+  "issue_id": "STALE-voe"
+}

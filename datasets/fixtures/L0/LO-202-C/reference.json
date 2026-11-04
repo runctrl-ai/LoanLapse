@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-202-C",
+  "boundary": "mark_conditions_cleared",
+  "reference_kind": "ALLOW",
+  "reference_contracts": [],
+  "rationale": "The resolution cites the current VOE version and was made by an authorized role; connector ok.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [],
+  "resume_condition": null
+}

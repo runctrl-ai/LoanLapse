@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-202",
+  "documents": [
+    {
+      "id": "VOE-1077",
+      "type": "voe",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-03T10:00:00Z",
+      "payload": {
+        "employer": "Synthetic Corp",
+        "status": "employed"
+      }
+    },
+    {
+      "id": "VOE-1077",
+      "type": "voe",
+      "version": 2,
+      "channel": "portal",
+      "received_at": "2026-09-12T10:00:00Z",
+      "payload": {
+        "employer": "Synthetic Corp",
+        "status": "notice_period"
+      }
+    }
+  ],
+  "computed_results": [],
+  "connectors": [
+    {
+      "name": "voe_verification",
+      "status": "ok",
+      "attempted_at": "2026-09-05T10:00:00Z",
+      "result": {
+        "match": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "DUP-cross-system-id__defect-02",
+  "documents": [
+    {
+      "id": "ID-4123",
+      "type": "identity",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-01T10:00:00Z",
+      "generated_at": "2026-09-01T10:00:00Z",
+      "payload": {
+        "name": "D. Silva"
+      }
+    },
+    {
+      "id": "W2-A-123",
+      "type": "w2",
+      "version": 1,
+      "channel": "los",
+      "received_at": "2026-09-03T10:00:00Z",
+      "generated_at": "2026-08-02T00:00:00Z",
+      "payload": {
+        "employer_ein": "90123",
+        "tax_year": "2025"
+      }
+    },
+    {
+      "id": "W2-B-123",
+      "type": "w2",
+      "version": 1,
+      "channel": "doc_ai",
+      "received_at": "2026-09-05T10:00:00Z",
+      "generated_at": "2026-08-10T00:00:00Z",
+      "payload": {
+        "employer_ein": "90123",
+        "tax_year": "2025",
+        "note": "same W2 via doc-AI"
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "A-4123",
+      "type": "income_doc_check",
+      "computed_at": "2026-09-06T10:00:00Z",
+      "computed_at_seq": 4,
+      "inputs": {
+        "W2-A-123": 1
+      },
+      "derived_from": [],
+      "outcome": "verified"
+    },
+    {
+      "id": "R-4123",
+      "type": "readiness",
+      "computed_at": "2026-09-06T10:00:00Z",
+      "computed_at_seq": 4,
+      "inputs": {
+        "ID-4123": 1
+      },
+      "derived_from": [],
+      "outcome": "ready"
+    }
+  ],
+  "connectors": [
+    {
+      "name": "credit_report",
+      "status": "ok",
+      "attempted_at": "2026-09-06T11:00:00Z",
+      "result": {
+        "adverse_findings": []
+      }
+    }
+  ]
+}

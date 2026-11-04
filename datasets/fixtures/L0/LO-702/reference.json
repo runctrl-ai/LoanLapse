@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-702",
+  "boundary": "mark_conditions_cleared",
+  "reference_kind": "HOLD",
+  "reference_contracts": [
+    "requireEvidencePresent"
+  ],
+  "rationale": "The must-know VOE verification connector is UNKNOWN at the boundary; clearance cannot treat a failed verification fetch as a passed verification. Fail closed.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "resume_condition": "The verification fetch succeeds and the clearance is re-evaluated against its result.",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "The resolution record and the clearance proposal are each well-formed, and the connector outage is world state rather than a step failure. Only the composition - clearing while the must-know verification is unanswerable - is wrong."
+}

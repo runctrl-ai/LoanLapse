@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-301-S",
+  "documents": [
+    {
+      "id": "ID-2010",
+      "type": "identity",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-01T10:00:00Z",
+      "payload": {}
+    },
+    {
+      "id": "INC-2010",
+      "type": "income",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-02T10:00:00Z",
+      "payload": {
+        "periods": [
+          "2026-07",
+          "2026-08"
+        ],
+        "monthly_amount": 7200
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "R-2010-a",
+      "type": "readiness",
+      "computed_at": "2026-09-06T10:00:00Z",
+      "inputs": {
+        "ID-2010": 1,
+        "INC-2010": 1
+      },
+      "outcome": "ready"
+    }
+  ],
+  "connectors": [
+    {
+      "name": "credit_report",
+      "status": "ok",
+      "attempted_at": "2026-09-06T10:00:00Z",
+      "result": {
+        "adverse_findings": []
+      }
+    }
+  ]
+}

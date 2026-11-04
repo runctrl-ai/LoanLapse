@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "SOD-collectionbot-clears__handled-06",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-SOD"
+  ],
+  "issue_id": "SOD-collectionbot-clears",
+  "variation": "V2",
+  "gate": "B",
+  "group_id": "SOD-collectionbot-clears",
+  "split": "unassigned",
+  "loan_keys": {
+    "loan_id": "LN-7237",
+    "borrower_id": "BRW-837"
+  }
+}

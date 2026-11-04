@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "UNK-credit-timeout__defect-03",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-UNK"
+  ],
+  "issue_id": "UNK-credit-timeout",
+  "variation": "V3",
+  "gate": "A",
+  "group_id": "UNK-credit-timeout",
+  "split": "unassigned",
+  "loan_keys": {
+    "loan_id": "LN-7080",
+    "borrower_id": "BRW-680"
+  }
+}

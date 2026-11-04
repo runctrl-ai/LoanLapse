@@ -1,0 +1,45 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "CTX-caveat-to-closing__defect-03",
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-09-04T10:00:00Z",
+      "node": "7_conditions",
+      "agent": "underwriter",
+      "action": "issue_conditional_approval",
+      "status": "ok",
+      "produces": {
+        "document": "DISC-6190"
+      },
+      "note": "caveat present"
+    },
+    {
+      "seq": 2,
+      "at": "2026-09-06T10:00:00Z",
+      "node": "9_gate_c_decide",
+      "agent": "loan_officer",
+      "action": "summarise_for_closing",
+      "status": "ok",
+      "produces": {
+        "computed_result": "S1"
+      },
+      "reads": [
+        "DISC-6190"
+      ],
+      "note": "caveat dropped in closing handoff"
+    },
+    {
+      "seq": 3,
+      "at": "2026-09-07T10:00:00Z",
+      "node": "9_gate_c_decide",
+      "agent": "underwriter",
+      "action": "propose_decision",
+      "status": "ok",
+      "reads": [
+        "S1"
+      ],
+      "note": "proceeds to closing without the caveat"
+    }
+  ]
+}

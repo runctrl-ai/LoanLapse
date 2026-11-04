@@ -1,0 +1,72 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "STALE-appraisal-at-decision__handled-06",
+  "documents": [
+    {
+      "id": "ID-1017",
+      "type": "identity",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-01T10:00:00Z",
+      "generated_at": "2026-09-01T10:00:00Z",
+      "payload": {
+        "name": "R. Ferreira"
+      }
+    },
+    {
+      "id": "INC-1017",
+      "type": "income",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-02T10:00:00Z",
+      "generated_at": "2026-09-02T10:00:00Z",
+      "payload": {
+        "periods": [
+          "2026-07",
+          "2026-08"
+        ],
+        "monthly": 3600
+      }
+    },
+    {
+      "id": "INC-1017",
+      "type": "income",
+      "version": 2,
+      "channel": "portal",
+      "received_at": "2026-09-10T10:00:00Z",
+      "generated_at": "2026-09-10T10:00:00Z",
+      "payload": {
+        "periods": [
+          "2026-07",
+          "2026-08"
+        ],
+        "monthly": 5300,
+        "note": "updated"
+      }
+    }
+  ],
+  "computed_results": [
+    {
+      "id": "R-1017",
+      "type": "readiness",
+      "computed_at": "2026-09-11T10:00:00Z",
+      "computed_at_seq": 4,
+      "inputs": {
+        "ID-1017": 1,
+        "INC-1017": 2
+      },
+      "derived_from": [],
+      "outcome": "ready"
+    }
+  ],
+  "connectors": [
+    {
+      "name": "credit_report",
+      "status": "ok",
+      "attempted_at": "2026-09-11T09:00:00Z",
+      "result": {
+        "adverse_findings": []
+      }
+    }
+  ]
+}

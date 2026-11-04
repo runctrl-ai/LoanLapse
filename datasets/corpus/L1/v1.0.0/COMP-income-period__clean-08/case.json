@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "COMP-income-period__clean-08",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-COMP"
+  ],
+  "issue_id": "COMP-income-period",
+  "variation": "V0",
+  "gate": "A",
+  "group_id": "COMP-income-period",
+  "split": "unassigned",
+  "loan_keys": {
+    "loan_id": "LN-7041",
+    "borrower_id": "BRW-641"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "CLEAN-2",
+  "workflow": "loan_underwriting",
+  "family_ids": [],
+  "issue_id": null,
+  "variation": "V0",
+  "gate": "C",
+  "group_id": "CLEAN-2",
+  "split": "dev",
+  "notes": "Clean file that correctly does NOT qualify (DTI over the product limit). Ground truth DENY, no defect. Shows a clean V0 case whose ground truth is deny."
+}

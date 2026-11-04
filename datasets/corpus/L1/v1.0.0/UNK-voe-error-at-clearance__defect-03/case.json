@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "UNK-voe-error-at-clearance__defect-03",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-UNK"
+  ],
+  "issue_id": "UNK-voe-error-at-clearance",
+  "variation": "V3",
+  "gate": "B",
+  "group_id": "UNK-voe-error-at-clearance",
+  "split": "unassigned",
+  "loan_keys": {
+    "loan_id": "LN-7091",
+    "borrower_id": "BRW-691"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "CTX-1",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-CTX"
+  ],
+  "issue_id": "CTX-qualifier",
+  "variation": "V1",
+  "gate": "C",
+  "group_id": "CTX-1",
+  "split": "dev",
+  "notes": "No injection. A decision-relevant qualifier ('under dispute') is dropped as the file is summarised across handoffs; the decision reads a file that no longer matches the source."
+}

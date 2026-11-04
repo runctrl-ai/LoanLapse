@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "CTX-qualifier-dropped__defect-00",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-CTX"
+  ],
+  "issue_id": "CTX-qualifier-dropped",
+  "variation": "V1",
+  "gate": "C",
+  "group_id": "CTX-qualifier-dropped",
+  "split": "unassigned",
+  "loan_keys": {
+    "loan_id": "LN-7176",
+    "borrower_id": "BRW-776"
+  }
+}

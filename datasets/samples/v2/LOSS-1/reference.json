@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LOSS-1",
+  "boundary": "render_decision",
+  "ground_truth": "HOLD",
+  "contracts_fired": [
+    "requireToolResultValidity"
+  ],
+  "variation": "V3",
+  "rationale": "The kyb_registry call reports status ok but returns an empty body; the risk assessment treats the empty result as a clean check. An empty-but-success result means the check did not actually run.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [
+    "last_step_ok",
+    "payload_rules"
+  ],
+  "resume_condition": "Re-run the registry check until it returns a populated result, then re-evaluate.",
+  "no_single_culprit": true,
+  "no_single_culprit_justification": "The API call and each step reported success; nothing errored. The failure is composing a decision on a check that returned nothing while claiming to have run."
+}

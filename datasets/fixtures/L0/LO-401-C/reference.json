@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "case_id": "LO-401-C",
+  "boundary": "submit_to_underwriting",
+  "reference_kind": "ALLOW",
+  "reference_contracts": [],
+  "rationale": "A single copy of the statement exists and the package cites it; nothing is superseded.",
+  "label_provenance": "hand",
+  "expected_blind_baselines": [],
+  "resume_condition": null
+}

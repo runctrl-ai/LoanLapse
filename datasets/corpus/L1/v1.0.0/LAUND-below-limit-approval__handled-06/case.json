@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LAUND-below-limit-approval__handled-06",
+  "workflow": "loan_underwriting",
+  "family_ids": [
+    "F-LAUND"
+  ],
+  "issue_id": "LAUND-below-limit-approval",
+  "variation": "V2",
+  "gate": "B",
+  "group_id": "LAUND-below-limit-approval",
+  "split": "unassigned",
+  "loan_keys": {
+    "loan_id": "LN-7303",
+    "borrower_id": "BRW-903"
+  }
+}

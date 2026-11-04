@@ -1,0 +1,30 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "UNK-voe-error-at-clearance__defect-04",
+  "documents": [
+    {
+      "id": "INC-3092",
+      "type": "income",
+      "version": 1,
+      "channel": "portal",
+      "received_at": "2026-09-02T10:00:00Z",
+      "generated_at": "2026-09-02T10:00:00Z",
+      "payload": {
+        "periods": [
+          "2026-07",
+          "2026-08"
+        ],
+        "monthly": 9600
+      }
+    }
+  ],
+  "computed_results": [],
+  "connectors": [
+    {
+      "name": "voe_verification",
+      "status": "error",
+      "attempted_at": "2026-09-12T11:55:00Z",
+      "result": null
+    }
+  ]
+}

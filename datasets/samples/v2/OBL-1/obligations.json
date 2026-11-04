@@ -1,0 +1,23 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "OBL-1",
+  "obligations": [
+    {
+      "id": "C-17",
+      "kind": "condition",
+      "type": "large_deposit_explanation",
+      "enforce_at": [
+        "submit_to_underwriting"
+      ],
+      "clearable_by": [
+        "processor",
+        "underwriter"
+      ],
+      "status_recorded": "open",
+      "resolution": null,
+      "payload": {
+        "deposit_amount": 9800
+      }
+    }
+  ]
+}

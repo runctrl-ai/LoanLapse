@@ -1,0 +1,21 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "STALE-income-cascade__handled-06",
+  "boundary": "submit_to_underwriting",
+  "proposed_at": "2026-09-11T11:00:00Z",
+  "actor": {
+    "id": "user.lo1",
+    "role": "loan_officer"
+  },
+  "package": {
+    "action": "submit_to_underwriting",
+    "readiness_ref": "R-1006",
+    "completeness": {
+      "status": "complete"
+    },
+    "documents_cited": [
+      "ID-1006",
+      "INC-1006"
+    ]
+  }
+}

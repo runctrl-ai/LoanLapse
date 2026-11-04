@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0.0",
+  "case_id": "LOSS-partial-fields__pending-10",
+  "boundary": "submit_to_underwriting",
+  "proposed_at": "2026-09-04T10:00:00Z",
+  "actor": {
+    "id": "user.lo1",
+    "role": "loan_officer"
+  },
+  "package": {
+    "action": "submit_to_underwriting",
+    "readiness_ref": "R-1730",
+    "completeness": {
+      "status": "complete"
+    },
+    "documents_cited": [
+      "INC-1730"
+    ]
+  }
+}
