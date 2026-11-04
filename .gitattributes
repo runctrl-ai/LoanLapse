@@ -1,0 +1,6 @@
+# The corpus is deterministically generated data, not hand-written source.
+# Mark it so GitHub's language stats reflect the code, and diffs stay readable.
+datasets/corpus/** linguist-generated=true
+datasets/samples/** linguist-generated=true
+datasets/fixtures/** linguist-generated=true
+loanlapse.jsonl linguist-generated=true
